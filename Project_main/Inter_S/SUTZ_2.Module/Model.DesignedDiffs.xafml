@@ -1,0 +1,1521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Система управления товарными запасами" Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="SUTZ_2.Module.BO.Documents.BaseDocument" IsVisibleInReports="True">
+      <OwnMembers>
+        <Member Name="Comment" PropertyEditorType="DevExpress.ExpressApp.Win.Editors.StringPropertyEditor" />
+        <Member Name="Delimeter" Caption="Разделитель учета" />
+        <Member Name="FirstSign" Caption="ТО" />
+        <Member Name="FourthSign" Caption="Четвертый знак" />
+        <Member Name="SecondSign" Caption="ТП" />
+        <Member Name="ThirdSign" Caption="Третий знак" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Documents.DocInventory" IsVisibleInReports="True" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocInvoiceOrder" IsVisibleInReports="True">
+      <OwnMembers>
+        <Member Name="DocListOfGoods" Caption="Номенклатура" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPeremeshenie" IsVisibleInReports="True">
+      <OwnMembers>
+        <Member Name="DocListOfGoods" Caption="Товары" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPeremeshGoods" Caption="Товары">
+      <OwnMembers>
+        <Member Name="BestBefore" EditMaskType="DateTime" EditMask="d" DisplayFormat="{0:d}" />
+        <Member Name="DocLineUID" Caption="DocLineUID" />
+        <Member Name="PutTo" Caption="Положить В" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPrihoda" IsVisibleInReports="True" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecRashoda" IsVisibleInReports="True" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecRashodaGoods">
+      <OwnMembers>
+        <Member Name="LineNo" Index="1" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Documents.DocTrebovanie" IsVisibleInReports="True" />
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.LogMessages" DefaultLookupListView="LogMessages_LookupListView">
+      <OwnMembers>
+        <Member Name="MessageText" RowCount="3" />
+        <Member Name="MessageTime" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.LogTypeMessages">
+      <OwnMembers>
+        <Member Name="percentage" PropertyEditorType="DevExpress.ExpressApp.Win.Editors.IntegerPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.NET_SUTZ_DocJobeProperties">
+      <OwnMembers>
+        <Member Name="dTimeRead" EditMaskType="DateTime" EditMask="G" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.NET_SUTZ_DocSpecPeremeshGoods">
+      <OwnMembers>
+        <Member Name="QuantityOfItems" DisplayFormat="{0:n}" EditMask="n" />
+        <Member Name="QuantityOfUnits" EditMask="n" DisplayFormat="{0:n}" />
+        <Member Name="TotalQuantity" DisplayFormat="{0:n}" EditMask="n" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.NET_SUTZ_DocSpecPeremeshHeaders">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.NET_SUTZ_DocSpecPrihodaGoods">
+      <OwnMembers>
+        <Member Name="QuantityOfItems" EditMask="n" DisplayFormat="{0:n}" />
+        <Member Name="QuantityOfUnits" DisplayFormat="{0:n}" EditMask="n" />
+        <Member Name="TotalQuantity" DisplayFormat="{0:n}" EditMask="n" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.NET_SUTZ_DocSpecPrihodaHeaders">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMask="G" />
+        <Member Name="dTimeWrite" EditMask="G" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.NET_SUTZ_MobileWorkUnit">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMask="G" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMask="G" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SQL_Exchange_Inbound">
+      <OwnMembers>
+        <Member Name="IsLoadDocJobeProperties" Caption="Документ- вид работы" />
+        <Member Name="IsLoadDocProperties" Caption="Свойства документа" />
+        <Member Name="IsLoadUsers" Caption="Пользователи" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_BarcodesOfGoods">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMask="G" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Clients">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Countries">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_CustomerStores">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocInventoryHeaders">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocJobeProperties">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" EditMaskType="DateTime" EditMask="d" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocProperties">
+      <OwnMembers>
+        <Member Name="dTimeRead" EditMaskType="DateTime" EditMask="G" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMask="G" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocSpecPeremeshHeaders">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocSpecPrihodaHeaders">
+      <OwnMembers>
+        <Member Name="DocDateTime" DisplayFormat="{0:G}" EditMask="G" />
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMask="G" />
+        <Member Name="dTimeWrite" EditMask="G" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocSpecRashodaHeaders">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_DocTrebovanieHeaders">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Goods">
+      <OwnMembers>
+        <Member Name="dTimeWrite" DisplayFormat="{0:d}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_JobTypes">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Logistics">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Manufacturers">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_OKEI">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Properties">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_StockRooms">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_StorageCodes">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Units">
+      <OwnMembers>
+        <Member Name="dTimeRead" EditMaskType="DateTime" EditMask="G" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="Height" EditMask="N" DisplayFormat="{0:N}" />
+        <Member Name="Weight" EditMask="N" DisplayFormat="{0:N}" />
+        <Member Name="Width" EditMask="N" DisplayFormat="{0:N}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Users">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SUTZ_NET_Warehouses">
+      <OwnMembers>
+        <Member Name="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <Member Name="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.BarcodesOfGoods" Caption="Штрихкоды товаров" />
+    <Class Name="SUTZ_2.Module.BO.References.BarcodesOfShipments" Caption="Штрихкоды документов" />
+    <Class Name="SUTZ_2.Module.BO.References.ClientDivisions" Caption="Подразделения клиента" />
+    <Class Name="SUTZ_2.Module.BO.References.Clients" Caption="Клиенты" />
+    <Class Name="SUTZ_2.Module.BO.References.ClientShops" Caption="Магазины клиента" />
+    <Class Name="SUTZ_2.Module.BO.References.ContainerNumbers" Caption="Номера контейнеров" />
+    <Class Name="SUTZ_2.Module.BO.References.Countries" Caption="Страны" />
+    <Class Name="SUTZ_2.Module.BO.References.Delimeters" Caption="Разделители учета" />
+    <Class Name="SUTZ_2.Module.BO.References.Goods" Caption="Номенклатура">
+      <OwnMembers>
+        <Member Name="BarcodesCollection" Caption="Штрих-коды товара" />
+        <Member Name="PropertiesOfGoodsCollection" Caption="Характеристики номенклатуры" />
+        <Member Name="SetOfGoodsCollection" Caption="Комплектация товара" />
+        <Member Name="UnitsCollection" Caption="Единицы измерения" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.JobTypes" Caption="Виды работы">
+      <OwnMembers>
+        <Member Name="TypeOfWork" Caption="Тип работы" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.LogisticsSettings" Caption="Логистика" />
+    <Class Name="SUTZ_2.Module.BO.References.Manufacturers" Caption="Производители" />
+    <Class Name="SUTZ_2.Module.BO.References.MaxNumbersForObjects" Caption="Счетчики номеров объектов" />
+    <Class Name="SUTZ_2.Module.BO.References.Mobile.MobileWorkUnit">
+      <OwnMembers>
+        <Member Name="AssignedUser" Caption="Назначено пользователю" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.Mobile.MobileWorkUsers">
+      <OwnMembers>
+        <Member Name="dTimeClosedFrom" DisplayFormat="{0:G}" EditMask="G" />
+        <Member Name="dTimeClosedTo" DisplayFormat="{0:G}" EditMask="G" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.NET_SUTZ_Unloads">
+      <OwnMembers>
+        <Member Name="dTimeInsertRecord" DisplayFormat="{0:G}" />
+        <Member Name="dTimeUnloadRecord" EditMaskType="DateTime" EditMask="G" DisplayFormat="{0:G}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.OKEI" Caption="ОКЕИ" />
+    <Class Name="SUTZ_2.Module.BO.References.PalletLabels" Caption="Паллетные этикетки" />
+    <Class Name="SUTZ_2.Module.BO.References.PropertiesOfGoods" Caption="Характеристики номенклатуры" />
+    <Class Name="SUTZ_2.Module.BO.References.SetOfGoods" Caption="Комплектация номенклатуры" />
+    <Class Name="SUTZ_2.Module.BO.References.StockRooms" Caption="Кладовые" />
+    <Class Name="SUTZ_2.Module.BO.References.StorageCodes" Caption="Коды размещения" />
+    <Class Name="SUTZ_2.Module.BO.References.TypesOfCellValue" Caption="Типы ячеек" />
+    <Class Name="SUTZ_2.Module.BO.References.Units" Caption="Единицы измерения" />
+    <Class Name="SUTZ_2.Module.BO.References.Users" Caption="Пользователи">
+      <OwnMembers>
+        <Member Name="UserSettingsCollection" Caption="Настройки пользователя" />
+        <Member Name="UsersRoles" Caption="Права пользователя" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.UserSettings" Caption="Настройки пользователя" />
+    <Class Name="SUTZ_2.Module.BO.References.UsersRole" Caption="Набор прав" />
+    <Class Name="SUTZ_2.Module.BO.References.Warehouses" Caption="Склады" />
+  </BOModel>
+  <NavigationItems DefaultChildItemsDisplayStyle="List" NavigationStyle="TreeList" DefaultLeafImageName="Action_Open_Object" StartupNavigationItem="">
+    <Items>
+      <Item Id="@7141f558-0714-43f4-bb25-ef036fb2d218" Caption="Документы" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@47bb1a6a-afaf-4b2c-b51d-a6b0c2f8b0ec" ViewId="DocSpecRashoda_ListView" Caption="Отборочные листы" IsNewNode="True" />
+          <Item Id="@8d307a7a-62b2-4b8e-996e-362208d485fe" ViewId="DocTrebovanie_ListView" Caption="Требования на разгрузку" IsNewNode="True" />
+          <Item Id="@a2bae8c3-7aca-459f-8b12-36406ccdeebc" ViewId="DocSpecPeremeshenie_ListView" Caption="Спецификации перемещения" IsNewNode="True" />
+          <Item Id="@b6d16b41-d1fa-4375-80e9-0f302025ea6c" ViewId="DocInventory_ListView" Caption="Инвентаризации" IsNewNode="True" />
+          <Item Id="@e20b73d5-76a2-4af0-bd2d-9289a3eaa3d0" ViewId="DocSpecPrihoda_ListView" Caption="Спецификации прихода" IsNewNode="True" />
+          <Item Id="@fa9f6d8f-7fc1-4889-9ab2-7c071af9acf9" ViewId="DocInvoiceOrder_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="@9531281a-4bed-4143-9c1e-09dfdbe5683b" ImageName="Action_Grand_Totals_Column" Caption="Справочники" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@4e3c0899-0eb6-495c-82a5-9f40e837760a" Caption="Складские" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="@61c8dafc-46c1-455d-8b54-f28ae917bdd7" ViewId="StockRooms_ListView" Caption="Кладовые" IsNewNode="True" />
+              <Item Id="@850a2f5f-0474-4178-ba22-890b3055c093" ViewId="StorageCodes_ListView" IsNewNode="True" />
+              <Item Id="@ae40e1fb-f072-4fa8-b053-35e756ca47ff" ViewId="ContainerNumbers_ListView" IsNewNode="True" />
+              <Item Id="@b25e5d50-9df7-4751-a874-7c9686289cbe" ViewId="DocJobesProperties_ListView" IsNewNode="True" />
+              <Item Id="@b4ce69d6-7679-4d96-ac92-5239f7acb94a" ViewId="PalletLabels_ListView" Caption="Паллетные этикетки" IsNewNode="True" />
+              <Item Id="@ef882615-ed8e-4836-ada6-66dfb3aea2a6" ViewId="" Caption="Мобильная СУТЗ" IsNewNode="True">
+                <Items IsNewNode="True">
+                  <Item Id="@3c3b508e-5f22-4b81-bca0-893f96703f51" ViewId="MobileWorkDocRows_ListView" Caption="Выполненные строки заданий" IsNewNode="True" />
+                  <Item Id="@711f3381-e3f7-4bca-8221-436628df1507" ViewId="MobileErrors_ListView" Caption="Ошибки мобильной СУТЗ" IsNewNode="True" />
+                  <Item Id="@beb43bac-deb6-49f7-bd56-e1bea09a25b7" Caption="Задания моб.сутз" ViewId="MobileWorkUnit_ListView" IsNewNode="True" />
+                  <Item Id="@de197977-3e47-43d5-9295-23e593297d5a" ViewId="MobileWorkUsers_ListView" Caption="Сотрудники задания" IsNewNode="True" />
+                  <Item Id="@f22e211a-8508-47b5-b119-7118eda22762" ViewId="DocJobesProperties_ListView" Caption="Разрешения на работу (документ-вид работы)" IsNewNode="True" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+          <Item Id="@c5464c9e-f264-44e2-ab78-11ea70d4ba5d" Caption="Общие" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="@05518d5e-e54c-41aa-a445-d6eb2c6ae564" ViewId="Warehouses_ListView" IsNewNode="True" />
+              <Item Id="@4aa55491-6fdb-486c-922d-228fa88121a8" ImageName="BO_Customer" ViewId="Clients_ListView" Caption="Контрагенты" IsNewNode="True">
+                <Items IsNewNode="True">
+                  <Item Id="@10d09547-c58a-4486-a0ab-c81d6f47614c" Caption="Штрих-коды клиента" ViewId="BarcodesOfShipments_ListView" IsNewNode="True" />
+                  <Item Id="@e898931f-fbf0-43a0-a133-e03e1fe79976" ViewId="ClientShops_ListView" IsNewNode="True" />
+                  <Item Id="@fef42051-ced9-45dd-90c0-a6f72f794c66" ViewId="ClientDivisions_ListView" IsNewNode="True" />
+                </Items>
+              </Item>
+              <Item Id="@783afcd1-bacc-4ac1-a180-d87686896170" ViewId="Countries_ListView" IsNewNode="True" />
+              <Item Id="@a1d9a970-6f3c-41dc-bfa6-74c26cd7f53f" ViewId="Goods_ListView" IsNewNode="True">
+                <Items IsNewNode="True">
+                  <Item Id="@212c3007-313b-40c3-8aec-10af87e3faa6" ViewId="SetOfGoods_ListView" Caption="Комплектация номенклатуры" IsNewNode="True" />
+                  <Item Id="@468ab16d-f714-45b1-997c-ff60fb56c990" ViewId="Units_ListView" Caption="Единицы измерения" IsNewNode="True" />
+                  <Item Id="@6647fc6f-604a-4f53-b944-c9aa8b119fa7" Caption="Классификатор единиц (ОКЕИ)" ViewId="OKEI_ListView" IsNewNode="True" />
+                  <Item Id="@8bb2c982-bb77-418c-9264-ab81031a47b0" Caption="Штрих-коды номенклатуры" ViewId="BarcodesOfGoods_ListView" IsNewNode="True" />
+                  <Item Id="@e047a9ec-30d7-40ab-a21a-be14b0f17209" Caption="Характеристики номенклатуры" ViewId="PropertiesOfGoods_ListView" IsNewNode="True" />
+                </Items>
+              </Item>
+              <Item Id="@b489ad4b-84da-401d-b7bd-6015cd26ac7d" ViewId="Manufacturers_ListView" Caption="Производители" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="@d176d3a1-a03e-4baf-a3a5-d5c51a09859b" Caption="Логистика" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="@5f4d7f20-88fa-43e8-a451-4f3129f86425" ViewId="TypesOfCellValue_ListView" Caption="Типы ячеек склада" IsNewNode="True" />
+              <Item Id="@7e6ab7d6-56d3-436a-a7b1-ee78d8ff5df3" ViewId="LogisticsSettings_ListView" IsNewNode="True" />
+              <Item Id="@83a08934-15c0-4523-8729-7a09a3804215" ViewId="Users_ListView" IsNewNode="True" />
+              <Item Id="@a6c6894f-6ff6-4d1f-8928-a4dc11bdc89e" ViewId="JobTypes_ListView" Caption="Виды складских работ" IsNewNode="True" />
+              <Item Id="@aacb3a06-f069-470e-81a0-04ab2928f12b" ViewId="Delimeters_ListView" IsNewNode="True" />
+              <Item Id="@bde271c9-eccd-4564-b065-7d6ec64d1653" ViewId="MaxNumbersForObjects_ListView" Caption="Счетчик номеров объектов" IsNewNode="True" />
+              <Item Id="@fff9030a-7f26-4fbb-a09b-2f24b40d5544" ViewId="LogisticsSettings_ListView" Caption="Логистические настройки" IsNewNode="True">
+                <Items IsNewNode="True">
+                  <Item Id="@986ed8d6-9f61-44f3-ac14-096ee0c144d3" ViewId="TypesOfCellValue_ListView" Caption="Типы ячеек склада" IsNewNode="True" />
+                  <Item Id="@c7297bc9-efc1-4f9d-93f3-76c10d3f55b8" ViewId="ContainerNumbers_ListView" IsNewNode="True" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="BaseDocument" ViewId="" Caption="Журналы документов" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@b8cb7012-fad8-460d-a437-0540871d88ab" ViewId="BaseDocument_ListView" Caption="Журнал документов" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Обработки">
+        <Items>
+          <Item Id="SQL_Exchange_Inbound_ListView">
+            <Items>
+              <Item Id="@568cce54-e609-41a8-af45-6f90d34b2b55" ImageName="Action_Open" Caption="Таблицы обмена NET-&gt;СУТЗ" IsNewNode="True">
+                <Items IsNewNode="True">
+                  <Item Id="@00dbd6fc-152c-4d39-9e3d-eb456c261fbf" ViewId="NET_SUTZ_DocJobeProperties_ListView" IsNewNode="True" />
+                  <Item Id="@1728d7f7-972f-425b-8f10-164eba90711f" ViewId="NET_SUTZ_MobileWorkUnit_ListView" IsNewNode="True">
+                    <Items IsNewNode="True">
+                      <Item Id="@2ac939bc-c89a-418a-bde6-653d69d74a5b" ViewId="NET_SUTZ_MobileWorkUsers_ListView" IsNewNode="True" />
+                      <Item Id="@a258033e-0d68-497a-a89f-15ce0be1139b" ViewId="NET_SUTZ_MobileWorkDocRows_ListView" IsNewNode="True" />
+                    </Items>
+                  </Item>
+                  <Item Id="@2b497f3e-b7dd-4a83-90cf-7e6a1cb8bc52" ViewId="NET_SUTZ_DocSpecPrihodaHeaders_ListView" IsNewNode="True">
+                    <Items IsNewNode="True">
+                      <Item Id="@ee87d70d-1d1a-4b73-bbc2-2abdbcda844b" ViewId="NET_SUTZ_DocSpecPrihodaGoods_ListView" IsNewNode="True" />
+                    </Items>
+                  </Item>
+                  <Item Id="@2db8bb51-44a3-4b54-af79-4a11ea94f314" ViewId="NET_SUTZ_DocSpecRashHeaders_ListView" IsNewNode="True" />
+                  <Item Id="@b9079f16-c4cc-4cda-bae3-2c310050d707" ViewId="NET_SUTZ_DocSpecPeremeshHeaders_ListView" IsNewNode="True">
+                    <Items IsNewNode="True">
+                      <Item Id="@72e250a4-7fc8-4491-8bd7-b3ad9281726f" ViewId="NET_SUTZ_DocSpecPeremeshGoods_ListView" IsNewNode="True" />
+                    </Items>
+                  </Item>
+                  <Item Id="@f7a0dff9-284b-44c2-8ddd-d56895d2a7ec" ViewId="NET_SUTZ_Unloads_ListView" IsNewNode="True" />
+                </Items>
+              </Item>
+              <Item Id="@fc8c6f44-ecf5-43fa-a7d4-a04d90b83c9b" ImageName="Action_Open" Caption="Таблицы обмена СУТЗ-&gt;NET" IsNewNode="True">
+                <Items IsNewNode="True">
+                  <Item Id="@7b0c2f07-9701-4ce3-9c7c-a03b184709e5" ImageName="Action_Open" Caption="Справочники" IsNewNode="True">
+                    <Items IsNewNode="True">
+                      <Item Id="@04f34204-d94b-4bf0-8e89-781c6ab0696c" ViewId="SUTZ_NET_StorageCodes_ListView" IsNewNode="True" />
+                      <Item Id="@1632b11e-2818-4c06-a867-5ea8ef7c5903" ViewId="SUTZ_NET_Clients_ListView" IsNewNode="True" />
+                      <Item Id="@22500230-7ad5-4b69-9299-6589ee38c44f" ViewId="SUTZ_NET_Units_ListView" IsNewNode="True" />
+                      <Item Id="@228802d7-31e3-4217-9beb-beba1d1c072b" ViewId="SUTZ_NET_HostsUsers_ListView" IsNewNode="True" />
+                      <Item Id="@2d0661b0-ffda-410d-96e5-1ae0371772b6" ViewId="SUTZ_NET_Warehouses_ListView" IsNewNode="True" />
+                      <Item Id="@2e4b18df-cbd2-4f28-a1c0-c7e9e3b45a20" ViewId="SUTZ_NET_CustomerUnits_ListView" IsNewNode="True" />
+                      <Item Id="@32d59ae5-2e83-4d0e-bb0e-79371169023d" ViewId="SUTZ_NET_Logistics_LookupListView" IsNewNode="True" />
+                      <Item Id="@353f72f5-64a1-4bbd-a5ed-c254d1d41b56" ViewId="SUTZ_NET_Goods_ListView" IsNewNode="True" />
+                      <Item Id="@3de45359-3dca-49f7-9611-fccda8c849bf" ViewId="SUTZ_NET_Properties_ListView" IsNewNode="True" />
+                      <Item Id="@5c1f2e28-bce1-447b-abf5-63f092467a57" ViewId="SUTZ_NET_BarcodesOfGoods_ListView" IsNewNode="True" />
+                      <Item Id="@8201cabb-44dc-4083-88a1-bb4a5cc03697" ViewId="SUTZ_NET_Countries_ListView" IsNewNode="True" />
+                      <Item Id="@97d18ef9-f24a-4a1a-8cde-c15b732ab8b6" ViewId="SUTZ_NET_DocProperties_ListView" IsNewNode="True" />
+                      <Item Id="@98d3f856-8852-414c-a932-eafb7a297199" ViewId="SUTZ_NET_DocJobeProperties_ListView" IsNewNode="True" />
+                      <Item Id="@b2eb6ebe-e33a-4875-a8ef-04b17384e204" ViewId="SUTZ_NET_CustomerStores_ListView" IsNewNode="True" />
+                      <Item Id="@bea30893-e53c-4866-8090-ebc72a311122" ViewId="SUTZ_NET_OKEI_ListView" IsNewNode="True" />
+                      <Item Id="@c11993d1-2732-4ad5-8ba7-531ef8dd4423" ViewId="SUTZ_NET_Users_ListView" IsNewNode="True" />
+                      <Item Id="@c25ed763-94ed-4fc2-95e0-6547d92b2cf9" ViewId="SUTZ_NET_OperationState_ListView" IsNewNode="True" />
+                      <Item Id="@dbdd6f94-5a3d-4a18-99d1-ffa7e27708c6" ViewId="SUTZ_NET_JobTypes_ListView" IsNewNode="True" />
+                      <Item Id="@e1590f29-4548-4c88-bca6-0514ffbaf84a" ViewId="SUTZ_NET_Logistics_ListView" IsNewNode="True" />
+                      <Item Id="@e70ba240-9c8a-40d0-a038-c6d306368328" ViewId="SUTZ_NET_Manufacturers_ListView" IsNewNode="True" />
+                      <Item Id="@fb0cb845-643f-4da5-8580-f23ddec70d81" ViewId="SUTZ_NET_StockRooms_ListView" IsNewNode="True" />
+                    </Items>
+                  </Item>
+                  <Item Id="@adf1fda1-ed4b-457b-8c81-fb02b0d911d0" ImageName="Action_Open" Caption="Документы" IsNewNode="True">
+                    <Items IsNewNode="True">
+                      <Item Id="@f8556df7-8a71-4f8e-9ba1-e9295b24b0a5" ViewId="SUTZ_NET_DocInvoiceOrderHeaders_ListView" Index="1" IsNewNode="True" />
+                      <Item Id="@40c9539c-78ee-47e5-9963-0fb1747b28b5" ViewId="SUTZ_NET_DocInventoryHeaders_ListView" Index="2" IsNewNode="True" />
+                      <Item Id="@f3da655f-b48d-4379-a87e-1ae34c3fe0ab" ViewId="SUTZ_NET_DocTrebovanieHeaders_ListView" Index="3" IsNewNode="True" />
+                      <Item Id="@08873442-4b4e-4e03-8ad5-816ad20402b4" ViewId="SUTZ_NET_DocSpecPrihodaHeaders_ListView" Index="4" IsNewNode="True" />
+                      <Item Id="@0d573b52-f350-4012-8c33-f14163fee9a9" ViewId="SUTZ_NET_DocSpecPeremeshHeaders_ListView" Index="5" IsNewNode="True" />
+                      <Item Id="@827138ed-88b1-4284-9d78-788329b7cb4e" ViewId="SUTZ_NET_DocSpecRashodaHeaders_ListView" Index="6" IsNewNode="True" />
+                    </Items>
+                  </Item>
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="16.1.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="16.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleUniqueValue Id="DevExpress.Persistent.Validation.RuleUniqueValue_SUTZ_2.Module.BO.Documents.DocInventoryGoods_DocLineUID" Removed="True" />
+      <RuleUniqueValue Id="DevExpress.Persistent.Validation.RuleUniqueValue_SUTZ_2.Module.BO.Documents.DocInvoiceOrderGoods_DocLineUID" Removed="True" />
+      <RuleUniqueValue Id="DevExpress.Persistent.Validation.RuleUniqueValue_SUTZ_2.Module.BO.Documents.DocSpecPeremeshGoods_DocLineUID" Removed="True" />
+      <RuleUniqueValue Id="DevExpress.Persistent.Validation.RuleUniqueValue_SUTZ_2.Module.BO.Documents.DocSpecRashodaGoods_DocLineUID" Removed="True" />
+      <RuleUniqueValue Id="DevExpress.Persistent.Validation.RuleUniqueValue_SUTZ_2.Module.BO.Documents.DocTrebovanieGoods_DocLineUID" Removed="True" />
+      <RuleCombinationOfPropertiesIsUnique Id="UniqueRuleForDocProperties" Removed="True" />
+      <RuleUniqueValue Id="Users_UserNameIsUnique" Removed="True" />
+      <RuleRequiredField Id="Users_UserNameRequired" Removed="True" />
+    </Rules>
+  </Validation>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.DateTime" DefaultDisplayFormat="{0:G}" DefaultEditMask="G" />
+      <RegisteredPropertyEditor PropertyType="System.Decimal" DefaultDisplayFormat="{0:N}" DefaultEditMask="N" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <ListView Id="BaseDocument_ListView" Caption="Общий журнал документов" IsFooterVisible="True" DataAccessMode="DataView">
+      <Columns>
+        <ColumnInfo Id="session" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ClientDivisions_DetailView" Caption="Подразделение клиента">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="Code" Caption="Код" Index="1" />
+        <PropertyEditor Id="Description" Index="2" />
+        <PropertyEditor Id="Address" Index="3" />
+        <PropertyEditor Id="Comment" Index="4" />
+        <PropertyEditor Id="KPP" Caption="код подразделения" Index="5" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ClientDivisions" ShowCaption="False" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ClientDivisions_col1" RelativeSize="100">
+                <LayoutItem Id="Code" SizeConstraintsType="Default" Index="0" RelativeSize="6.866952789699571" />
+                <LayoutItem Id="Description" SizeConstraintsType="Default" Index="1" RelativeSize="5.1502145922746783" />
+                <LayoutItem Id="KPP" ViewItem="KPP" SizeConstraintsType="Default" Index="2" RelativeSize="5.1502145922746783" IsNewNode="True" />
+                <LayoutItem Id="Comment" ViewItem="Comment" SizeConstraintsType="Default" Index="3" RelativeSize="5.1502145922746783" IsNewNode="True" />
+                <LayoutItem Id="Address" SizeConstraintsType="Default" Index="4" RelativeSize="77.6824034334764" ViewItem="Address" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ClientDivisions_col2" RelativeSize="49.900596421471171" Caption="ClientDivisions_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Address" Removed="True" />
+                <LayoutItem Id="Comment" Removed="True" />
+                <LayoutItem Id="iddSUTZ_GUID" Removed="True" />
+                <LayoutItem Id="KPP" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ClientDivisions_ListView" Caption="Подразделения клиента">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="ParentId" Caption="Клиент" />
+        <ColumnInfo Id="Code" Caption="Код" />
+      </Columns>
+    </ListView>
+    <ListView Id="ClientDivisions_LookupListView" Caption="Подразделения клиента" />
+    <DetailView Id="Clients_DetailView" Caption="Клиент" ImageName="BO_Customer">
+      <Items>
+        <PropertyEditor Id="Delimeter" Caption="Разделитель" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="Code" Caption="Код" />
+        <PropertyEditor Id="DeliveryAdress" Caption="Адрес доставки" />
+        <PropertyEditor Id="FullDescription" Caption="Полное наименование" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="23.605150214592275" Caption="Полное наименование" Index="0">
+            <LayoutItem Id="Code" ViewItem="Code" SizeConstraintsType="Default" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+            <LayoutItem Id="Description" ViewItem="Description" SizeConstraintsType="Default" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+            <LayoutItem Id="FullDescription" SizeConstraintsType="Default" Index="2" RelativeSize="21.818181818181817" />
+            <LayoutItem Id="DeliveryAdress" ViewItem="DeliveryAdress" SizeConstraintsType="Default" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="76.394849785407729" Index="1" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="8.15450643776824" Direction="Horizontal" Removed="True">
+            <LayoutGroup Id="Clients" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Clients_ListView" ImageName="BO_Customer" Caption="Контрагенты">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="Code" Caption="Код" />
+        <ColumnInfo Id="DeliveryAdress" Caption="Адрес доставки" />
+        <ColumnInfo Id="FullDescription" Caption="Полное наименование" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Clients_LookupListView" Caption="Клиенты" />
+    <DetailView Id="ClientShops_DetailView" Caption="Магазин клиента">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="Code" Index="1" Caption="Код" />
+        <PropertyEditor Id="Description" Index="2" />
+        <PropertyEditor Id="Address" Index="3" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ClientShops" ShowCaption="False" RelativeSize="100" Direction="Vertical" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ClientShops_ListView" Caption="Магазины клиента">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="ParentId" Caption="Клиент" />
+        <ColumnInfo Id="Code" Caption="Код" />
+      </Columns>
+    </ListView>
+    <ListView Id="ClientShops_LookupListView" Caption="Магазины клиента">
+      <Columns>
+        <ColumnInfo Id="Description" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ContainerNumbers_DetailView" Caption="Номер контейнера">
+      <Items>
+        <PropertyEditor Id="Description" Caption="Наименование" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ContainerNumbers" RelativeSize="100" Caption="ContainerNumbers">
+              <LayoutItem Id="Description" SizeConstraintsType="Default" Index="0" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ContainerNumbers_ListView" Caption="Номера контейнеров" />
+    <ListView Id="ContainerNumbers_LookupListView" Caption="Номера контейнеров">
+      <Columns>
+        <ColumnInfo Id="Description" Caption="Номер контейнера" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Countries_DetailView" Caption="Страна">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Countries" ShowCaption="False" RelativeSize="100" Direction="Vertical" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Countries_ListView" Caption="Страны">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="Code" Index="1" />
+        <ColumnInfo Id="Description" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="Countries_LookupListView" Caption="Страны" />
+    <DetailView Id="Delimeters_DetailView">
+      <Items>
+        <PropertyEditor Id="idd" Index="-1" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Delimeters" RelativeSize="100">
+              <LayoutItem Id="Description" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" />
+              <LayoutItem Id="DefaultDelimeter" SizeConstraintsType="Default" Index="1" RelativeSize="95.733333333333334" />
+              <LayoutItem Id="DelimeterID" SizeConstraintsType="Default" Index="1" RelativeSize="3.2" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Delimeters_ListView" Caption="Разделители учета" />
+    <ListView Id="Delimeters_LookupListView" Caption="Разделители учета" />
+    <ListView Id="DocInventory_ListView" IsFooterVisible="True" DataAccessMode="Server" />
+    <DetailView Id="DocInvoiceOrder_DetailView" Caption="Заявка покупателя">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <TabbedGroup Id="DocCaption" Caption="Шапка документа" Index="0" RelativeSize="34.920634920634917" IsNewNode="True">
+            <LayoutGroup Id="DocCaption1" Caption="Основные" ShowCaption="True" Direction="Vertical" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Auto38f8abe4-4201-4edd-8e9d-4efd7fcc81f8" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="23.529411764705884" IsNewNode="True">
+                <LayoutItem Id="DocNo" ViewItem="DocNo" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DocDateTime" ViewItem="DocDateTime" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto24b06bd9-8745-44bc-937d-79f82368c003" ShowCaption="False" Caption="" Index="1" RelativeSize="76.470588235294116" IsNewNode="True">
+                <LayoutItem Id="Client" ViewItem="Client" SizeConstraintsType="Default" Index="0" RelativeSize="23.076923076923077" IsNewNode="True" />
+                <LayoutItem Id="Warehouse" ViewItem="Warehouse" SizeConstraintsType="Default" Index="1" RelativeSize="23.076923076923077" IsNewNode="True" />
+                <LayoutGroup Id="Autoa5bfb115-2943-462e-95bd-c1dece73f65e" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="53.846153846153847" IsNewNode="True">
+                  <LayoutItem Id="ClientShop" ViewItem="ClientShop" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="ClientDivision" ViewItem="ClientDivision" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocCaption2" Caption="Дополнительные" ShowCaption="True" Direction="Vertical" Index="1" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="DocBase" ViewItem="DocBase" SizeConstraintsType="Default" Index="0" RelativeSize="23.529411764705884" IsNewNode="True" />
+              <LayoutItem Id="Comment" ViewItem="Comment" SizeConstraintsType="Default" Index="1" RelativeSize="17.647058823529413" IsNewNode="True" />
+              <LayoutGroup Id="Autodb4e7d91-8fe4-4f63-86cf-2bce49b9b6a2" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="35.294117647058826" IsNewNode="True">
+                <LayoutItem Id="ExecutionDate" ViewItem="ExecutionDate" SizeConstraintsType="Default" Index="0" RelativeSize="32.94701986754967" IsNewNode="True" />
+                <LayoutGroup Id="Auto413cc93b-2336-4aa2-973f-0f021f9d4a57" ShowCaption="False" Caption="" Index="1" RelativeSize="33.443708609271525" IsNewNode="True">
+                  <LayoutItem Id="Printed" ViewItem="Printed" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="Unloaded" ViewItem="Unloaded" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Shipped" ViewItem="Shipped" SizeConstraintsType="Default" Index="2" RelativeSize="33.609271523178805" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto3b042d6e-7400-45bb-9363-852ce2f7b3e5" ShowCaption="False" Caption="" Direction="Horizontal" Index="3" RelativeSize="23.529411764705884" IsNewNode="True">
+                <LayoutItem Id="StatusASU" ViewItem="StatusASU" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DeliveryType" ViewItem="DeliveryType" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="DocListOfGoods_Group" Direction="Vertical" Index="1" RelativeSize="65.079365079365076" Caption="Товары">
+            <LayoutItem Id="DocListOfGoods" SizeConstraintsType="Default" RelativeSize="89.9390243902439" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Index="1" RelativeSize="2.9761904761904763" Direction="Horizontal" Caption="Комментарий" Removed="True">
+            <LayoutItem Id="Comment" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="15.674603174603174" Direction="Horizontal" Removed="True">
+            <LayoutGroup Id="BaseDocument" Removed="True" />
+            <LayoutGroup Id="DocInvoiceOrder" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DocInvoiceOrder_DocListOfGoods_ListView" Caption="Товары">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="LineNo" Width="20" />
+        <ColumnInfo Id="Coeff" Caption="Коэфф" Width="20" />
+        <ColumnInfo Id="Unit" Width="20" />
+        <ColumnInfo Id="QuantityOfUnits" Caption="Количество кор" />
+        <ColumnInfo Id="QuantityOfItems" Caption="Количество шт." />
+        <ColumnInfo Id="TotalQuantity" Caption="Итого" />
+        <ColumnInfo Id="BestBefore" Width="50" />
+      </Columns>
+    </ListView>
+    <ListView Id="DocInvoiceOrder_ListView" Caption="Заявки покупателя" AllowEdit="True" IsFooterVisible="True" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="ClientDivision" Index="-1" />
+        <ColumnInfo Id="DeliveryType" Index="-1" />
+        <ColumnInfo Id="Printed" Index="-1" />
+        <ColumnInfo Id="Shipped" Index="-1" />
+        <ColumnInfo Id="Unloaded" Index="-1" />
+        <ColumnInfo Id="DocState" Index="1" />
+        <ColumnInfo Id="DocNo" Index="2" />
+        <ColumnInfo Id="DocDateTime" Index="3" />
+        <ColumnInfo Id="Client" Index="4" />
+        <ColumnInfo Id="ExecutionDate" Index="5" />
+        <ColumnInfo Id="Warehouse" Index="6" />
+        <ColumnInfo Id="DocBase" Index="7" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DocJobesProperties_DetailView" Caption="Разрешение на работу" />
+    <ListView Id="DocJobesProperties_ListView" Caption="Разрешения на работу" DataAccessMode="Server" />
+    <ListView Id="DocJobesProperties_LookupListView" Caption="Разрешения на работу" DataAccessMode="Server" />
+    <DetailView Id="DocSpecPeremeshenie_DetailView">
+      <Items>
+        <PropertyEditor Id="Delimeter" Removed="True" />
+        <PropertyEditor Id="DocState" Removed="True" />
+        <PropertyEditor Id="DocumentType" Removed="True" />
+        <PropertyEditor Id="FirstSign" Removed="True" />
+        <PropertyEditor Id="FourthSign" Removed="True" />
+        <PropertyEditor Id="IsMarkDeleted" Removed="True" />
+        <PropertyEditor Id="Quantity" Removed="True" />
+        <PropertyEditor Id="Recipient" Removed="True" />
+        <PropertyEditor Id="SecondSign" Removed="True" />
+        <PropertyEditor Id="Sender" Removed="True" />
+        <PropertyEditor Id="session" Removed="True" />
+        <PropertyEditor Id="ThirdSign" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="5.0666666666666664" Index="1" Direction="Horizontal">
+            <LayoutGroup Id="DocSpecPeremeshenie" Direction="Horizontal" RelativeSize="50">
+              <LayoutItem Id="DocNo" ViewItem="DocNo" Index="0" SizeConstraintsType="Default" RelativeSize="50" IsNewNode="True" />
+              <LayoutItem Id="DocDateTime" ViewItem="DocDateTime" Index="1" SizeConstraintsType="Default" RelativeSize="50" IsNewNode="True" />
+              <LayoutItem Id="AllowMovement" Removed="True" />
+              <LayoutItem Id="StockRoomFrom" Removed="True" />
+              <LayoutItem Id="StockRoomTo" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="BaseDocument" Removed="True">
+              <LayoutGroup Id="BaseDocument_col1">
+                <LayoutItem Id="DocBase" Removed="True" />
+                <LayoutItem Id="DocDateTime" Removed="True" />
+                <LayoutItem Id="DocNo" Removed="True" />
+                <LayoutItem Id="DocState" Removed="True" />
+                <LayoutItem Id="FirstSign" Removed="True" />
+                <LayoutItem Id="SecondSign" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ReservedGroup" Caption="" IsNewNode="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="РеквизитыДокумента" Index="2" RelativeSize="20.4" IsNewNode="True">
+            <LayoutGroup Id="ОсновныеРеквизиты" ShowCaption="True" Caption="Основные" Index="1" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="BaseDocument_col1" ShowCaption="False" Index="0" RelativeSize="49.585635359116019" IsNewNode="True">
+                <LayoutItem Id="StockRoomFrom" ViewItem="StockRoomFrom" SizeConstraintsType="Default" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                <LayoutItem Id="StockRoomTo" ViewItem="StockRoomTo" SizeConstraintsType="Default" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                <LayoutItem Id="AllowMovement" ViewItem="AllowMovement" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="BaseDocument_col2" ShowCaption="False" Caption="Документ-основание" Index="1" RelativeSize="49.585635359116019" IsNewNode="True">
+                <LayoutItem Id="DocBase" ViewItem="DocBase" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ДополнительныеРеквизиты" ShowCaption="True" Caption="Дополнительные" Index="2" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="SizeableEditors" ShowCaption="False" Caption="Комментарий" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Comment" ViewItem="Comment" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="DocListOfGoods_Group" Direction="Vertical" Index="3" RelativeSize="74.533333333333331">
+            <LayoutItem Id="DocListOfGoods" SizeConstraintsType="Default" RelativeSize="95.527728085867622" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DocSpecPeremeshenie_ListView" IsFooterVisible="True" DataAccessMode="Server" />
+    <ListView Id="DocSpecPeremeshGoods_ListView" NewItemRowPosition="None" FreezeColumnIndices="True">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="DocLineUID" Index="-1" />
+        <ColumnInfo Id="idd" Index="-1" />
+        <ColumnInfo Id="IsMarkDeleted" Index="-1" />
+        <ColumnInfo Id="ParentID" Index="-1" />
+        <ColumnInfo Id="LineNo" Index="0" />
+        <ColumnInfo Id="Good" Index="1" />
+        <ColumnInfo Id="Coeff" Index="2" />
+        <ColumnInfo Id="Unit" Index="3" />
+        <ColumnInfo Id="QuantityOfUnits" Index="4" />
+        <ColumnInfo Id="QuantityOfItems" Index="5" />
+        <ColumnInfo Id="TotalQuantity" Index="6">
+          <Summary>
+            <ColumnSummaryItem Id="@7c5b9375-ccc4-48e3-bfae-6ca81826f5b6" SummaryType="Sum" Index="1" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="BestBefore" Index="7" />
+        <ColumnInfo Id="Property" Index="8" />
+        <ColumnInfo Id="TakeFrom" Index="9" />
+        <ColumnInfo Id="PutTo" Index="10" />
+        <ColumnInfo Id="PalletLabel" Index="11" />
+        <ColumnInfo Id="ExchangePoint" Index="12" />
+        <ColumnInfo Id="QuantityOrig" Index="13" />
+        <ColumnInfo Id="QuantityFact" Index="14" />
+        <ColumnInfo Id="MoveStatus" Index="15" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DocSpecPrihoda_DetailView" Caption="Спецификация прихода">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="DocListOfGoods" Caption="Товары" />
+        <PropertyEditor Id="session" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <TabbedGroup Id="DocCaption" Caption="Шапка документа" ShowCaption="True" Index="0" RelativeSize="26.587301587301589" IsNewNode="True">
+            <LayoutGroup Id="DocCaptionTab1" Index="1" RelativeSize="100" ShowCaption="True" Caption="Основные" IsNewNode="True">
+              <LayoutGroup Id="Auto00839a08-68be-446d-b768-dcfe7582ccdc" ShowCaption="False" Caption="Auto00839a08-68be-446d-b768-dcfe7582ccdc(4)" Direction="Horizontal" Index="0" RelativeSize="40.425531914893618" IsNewNode="True">
+                <LayoutItem Id="DocNo" ViewItem="DocNo" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DocDateTime" ViewItem="DocDateTime" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto6922a481-cb1c-486d-ac22-b9ef0543abb8" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="34.042553191489361" IsNewNode="True">
+                <LayoutItem Id="AllowMovement" ViewItem="AllowMovement" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="AllowSender" ViewItem="AllowSender" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="StockRoomTo" ViewItem="StockRoomTo" SizeConstraintsType="Default" Index="1" RelativeSize="25.531914893617021" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocCaptionTab2" Caption="Дополнительные" ShowCaption="True" Index="2" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="DocBase" ViewItem="DocBase" SizeConstraintsType="Default" Index="0" RelativeSize="34.042553191489361" IsNewNode="True" />
+              <LayoutItem Id="Comment" ViewItem="Comment" SizeConstraintsType="Default" Index="1" RelativeSize="65.957446808510639" TextAlignMode="AutoSize" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="DocListOfGoods_Group" Direction="Vertical" RelativeSize="73.412698412698418" Index="1">
+            <LayoutItem Id="DocListOfGoods" SizeConstraintsType="Default" RelativeSize="91.081081081081081" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="26.587301587301589" Removed="True">
+            <LayoutGroup Id="BaseDocument" RelativeSize="33.663366336633665" Removed="True">
+              <LayoutGroup Id="BaseDocument_col1" RelativeSize="48.618090452261306" Caption="BaseDocument_col1" Direction="Horizontal">
+                <LayoutItem Id="Delimeter" Removed="True" />
+                <LayoutItem Id="DocDateTime" Removed="True" />
+                <LayoutItem Id="DocNo" Removed="True" />
+                <LayoutItem Id="idd" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="BaseDocument_col2" RelativeSize="48.618090452261306" Caption="BaseDocument_col2" Direction="Horizontal">
+                <LayoutItem Id="DocBase" Removed="True" />
+                <LayoutItem Id="DocState" Removed="True" />
+                <LayoutItem Id="iddSUTZ_GUID" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocSpecPrihoda" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="Auto00839a08-68be-446d-b768-dcfe7582ccdc" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="23.880597014925375" IsNewNode="True">
+                <LayoutItem Id="DocNo" ViewItem="DocNo" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DocDateTime" ViewItem="DocDateTime" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="StockRoomTo" ViewItem="StockRoomTo" SizeConstraintsType="Default" Index="1" RelativeSize="17.910447761194028" IsNewNode="True" Removed="True" />
+              <LayoutItem Id="AllowSender" SizeConstraintsType="Default" RelativeSize="17.910447761194028" Index="2" />
+              <LayoutItem Id="AllowMovement" SizeConstraintsType="Default" RelativeSize="17.910447761194028" Index="3" />
+              <LayoutItem Id="DocBase" ViewItem="DocBase" SizeConstraintsType="Default" Index="4" RelativeSize="22.388059701492537" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="7.1428571428571432" Direction="Horizontal" Caption="Комментарий" Removed="True">
+            <LayoutItem Id="Comment" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DocSpecPrihoda_DocListOfGoods_ListView">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="LineNo" Width="20" />
+        <ColumnInfo Id="GoodCode" Width="30" />
+        <ColumnInfo Id="Good" Width="100" />
+        <ColumnInfo Id="Coeff" Width="10" DisplayFormat="{0:N}" />
+        <ColumnInfo Id="Unit" Width="10" />
+        <ColumnInfo Id="QuantityOfUnits" Caption="Количество кор" DisplayFormat="{0:N}" />
+        <ColumnInfo Id="QuantityOfItems" Caption="Количество шт" DisplayFormat="{0:N}" />
+        <ColumnInfo Id="TotalQuantity" Caption="Итого" DisplayFormat="{0:N}" />
+        <ColumnInfo Id="PutTo" Caption="Положить В" />
+      </Columns>
+    </ListView>
+    <ListView Id="DocSpecPrihoda_ListView" Caption="Спецификации прихода" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="AllowSender" Index="-1" />
+        <ColumnInfo Id="AllowMovement" Index="1" Width="10" />
+        <ColumnInfo Id="DocNo" Index="2" Width="20" />
+        <ColumnInfo Id="DocDateTime" Index="3" Width="30" />
+        <ColumnInfo Id="StockRoomTo" Index="4" />
+        <ColumnInfo Id="DocBase" Index="5" />
+        <ColumnInfo Id="Comment" Index="10" />
+        <ColumnInfo Id="session" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="DocSpecPrihoda_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AllowMovement" Index="-1" />
+        <ColumnInfo Id="AllowSender" Index="-1" />
+        <ColumnInfo Id="DocState" Index="1" />
+        <ColumnInfo Id="DocNo" Index="2" />
+        <ColumnInfo Id="DocDateTime" Index="3" />
+        <ColumnInfo Id="StockRoomTo" Index="4" />
+        <ColumnInfo Id="session" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DocSpecRashoda_DetailView">
+      <Items>
+        <PropertyEditor Id="DocState" Removed="True" />
+        <PropertyEditor Id="DocumentType" Removed="True" />
+        <PropertyEditor Id="FirstSign" Removed="True" />
+        <PropertyEditor Id="FourthSign" Removed="True" />
+        <PropertyEditor Id="idd" Removed="True" />
+        <PropertyEditor Id="idGUID" Removed="True" />
+        <PropertyEditor Id="IsMarkDeleted" Removed="True" />
+        <PropertyEditor Id="Quantity" Removed="True" />
+        <PropertyEditor Id="SecondSign" Removed="True" />
+        <PropertyEditor Id="session" Removed="True" />
+        <PropertyEditor Id="ThirdSign" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <TabbedGroup Id="DocCaption" Caption="Шапка документа" Index="0" RelativeSize="28.0561122244489" IsNewNode="True">
+            <LayoutGroup Id="DocCaptionTab1" Caption="Основные" Index="0" Direction="Vertical" ShowCaption="True" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Group1" Caption="Group1(4)" Index="0" Direction="Horizontal" ShowCaption="False" RelativeSize="35" IsNewNode="True">
+                <LayoutItem Id="DocNo" ViewItem="DocNo" Index="0" MaxSize="20, 0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DocDateTime" ViewItem="DocDateTime" Index="1" MaxSize="0, 20" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Group2" Caption="Group2(7)" Index="1" Direction="Vertical" ShowCaption="False" RelativeSize="30" IsNewNode="True">
+                <LayoutItem Id="StockRoomFrom" ViewItem="StockRoomFrom" Index="0" MaxSize="100, 0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Group3" Caption="Group3(9)" Direction="Horizontal" ShowCaption="False" TextAlignMode="AlignWithChildren" Index="2" RelativeSize="35" IsNewNode="True">
+                <LayoutItem Id="TovarOtobran" ViewItem="TovarOtobran" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="TovarPoluchen" ViewItem="TovarPoluchen" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocCaptionTab2" Caption="Дополнительные" Index="1" ShowCaption="True" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Group1" Caption="Group1(13)" Index="0" ShowCaption="False" RelativeSize="35" IsNewNode="True">
+                <LayoutItem Id="DocBase" ViewItem="DocBase" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Group2" Caption="Group2(15)" Index="1" ShowCaption="False" RelativeSize="65" IsNewNode="True">
+                <LayoutItem Id="Comment" ViewItem="Comment" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="DocListOfGoods_Group" Caption="Товары" TextAlignMode="AlignWithChildren" Direction="Vertical" Index="1" RelativeSize="71.9438877755511">
+            <LayoutItem Id="DocListOfGoods" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" Removed="True">
+            <LayoutGroup Id="BaseDocument" Removed="True">
+              <LayoutGroup Id="BaseDocument_col1" Removed="True">
+                <LayoutItem Id="DocBase" Removed="True" />
+                <LayoutItem Id="DocDateTime" Removed="True" />
+                <LayoutItem Id="DocNo" Removed="True" />
+                <LayoutItem Id="DocState" Removed="True" />
+                <LayoutItem Id="FirstSign" Removed="True" />
+                <LayoutItem Id="SecondSign" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="BaseDocument_col2" Removed="True">
+                <LayoutItem Id="DocumentType" Removed="True" />
+                <LayoutItem Id="FourthSign" Removed="True" />
+                <LayoutItem Id="Quantity" Removed="True" />
+                <LayoutItem Id="Recipient" Removed="True" />
+                <LayoutItem Id="Sender" Removed="True" />
+                <LayoutItem Id="ThirdSign" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocSpecRashoda" Removed="True">
+              <LayoutItem Id="OrderClosed" Removed="True" />
+              <LayoutItem Id="StockRoomFrom" Removed="True" />
+              <LayoutItem Id="TovarOtobran" Removed="True" />
+              <LayoutItem Id="TovarPoluchen" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True">
+            <LayoutItem Id="Comment" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DocSpecRashoda_DocListOfGoods_ListView" IsFooterVisible="True" />
+    <ListView Id="DocSpecRashoda_ListView" Caption="Отборочные листы" IsFooterVisible="True" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="DocState" Index="1" />
+        <ColumnInfo Id="TovarOtobran" Index="2" />
+        <ColumnInfo Id="DocNo" Index="4" />
+        <ColumnInfo Id="StockRoomFrom" Index="4" Caption="Отправитель" />
+        <ColumnInfo Id="DocDateTime" Index="5" DisplayFormat="{0:G}" EditMask="G" />
+        <ColumnInfo Id="OrderClosed" Index="6" />
+        <ColumnInfo Id="Comment" Index="7" />
+        <ColumnInfo Id="session" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DocTrebovanie_DetailView" Caption="Требование на разгрузку">
+      <Items>
+        <PropertyEditor Id="DocState" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="idGUID" Index="-1" />
+        <PropertyEditor Id="DocDateTime" DisplayFormat="{0:G}" EditMaskType="DateTime" EditMask="G" />
+        <PropertyEditor Id="DocTrebovanieGoodsCollection" Caption="Товары" />
+        <PropertyEditor Id="session" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <TabbedGroup Id="DocHeader" Caption="" Index="0" RelativeSize="20.634920634920636" IsNewNode="True">
+            <LayoutGroup Id="DocCaptionTab1" Caption="Основные" Index="0" ShowCaption="True" RelativeSize="100" Direction="Horizontal" IsNewNode="True">
+              <LayoutGroup Id="Auto67cffb12-5115-48ff-ad06-14f76e61a7f2" ShowCaption="False" Caption="" Index="0" RelativeSize="49.932157394843962" IsNewNode="True">
+                <LayoutItem Id="DocNo" ViewItem="DocNo" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="AllowMovement" ViewItem="AllowMovement" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto5c8402ed-4d54-474b-8ef1-83c7aa22267f" ShowCaption="False" Caption="" Index="1" RelativeSize="50.067842605156038" IsNewNode="True">
+                <LayoutItem Id="DocDateTime" ViewItem="DocDateTime" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DocState" ViewItem="DocState" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocCaptionTab2" Caption="Дополнительные" Index="1" ShowCaption="True" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Comment" ViewItem="Comment" RelativeSize="50" SizeConstraintsType="Default" Index="0" IsNewNode="True" />
+              <LayoutItem Id="DocBase" Index="1" ViewItem="DocBase" SizeConstraintsType="Default" RelativeSize="50" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.841269841269842" Removed="True">
+            <LayoutGroup Id="BaseDocument" RelativeSize="100" Index="0" Removed="True">
+              <LayoutGroup Id="BaseDocument_col1" RelativeSize="48.492791612057665">
+                <LayoutItem Id="DocNo" SizeConstraintsType="Default" RelativeSize="50" Index="0" Removed="True" />
+                <LayoutGroup Id="Auto5a819d6e-9d31-4b09-9872-7c51fdd3f34f" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DocDateTime" SizeConstraintsType="Default" RelativeSize="50" Index="1" Removed="True" />
+                <LayoutItem Id="Delimeter" SizeConstraintsType="Default" RelativeSize="21.428571428571427" Removed="True" />
+                <LayoutItem Id="idd" SizeConstraintsType="Default" RelativeSize="36.363636363636367" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="BaseDocument_col2" RelativeSize="48.623853211009177">
+                <LayoutItem Id="DocBase" SizeConstraintsType="Default" RelativeSize="50" Removed="True" />
+                <LayoutItem Id="DocState" SizeConstraintsType="Default" RelativeSize="50" Removed="True" />
+                <LayoutItem Id="iddSUTZ_GUID" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DocTrebovanie" RelativeSize="29.23076923076923" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="AllowMovement" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="6.5476190476190474" Removed="True">
+            <LayoutItem Id="Comment" SizeConstraintsType="Default" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DocTrebovanie_DocTrebovanieGoodsCollection_ListView" AllowEdit="True" NewItemRowPosition="Bottom" Caption="Товары" IsFooterVisible="True" DetailViewID="">
+      <Columns>
+        <ColumnInfo Id="LineNo" Index="1" Width="5" Caption="№" />
+        <ColumnInfo Id="GoodCode" Width="20" Index="2" />
+        <ColumnInfo Id="Good" Index="3" Width="100" />
+        <ColumnInfo Id="Coeff" Index="4" Width="10" Caption="Коэфф" DisplayFormat="{0:N}" AllowEdit="False" />
+        <ColumnInfo Id="Unit" Index="5" Width="10" />
+        <ColumnInfo Id="QuantityOfUnits" Caption="Кол.Кор" Width="10" Index="6" DisplayFormat="{0:n}" EditMask="n" />
+        <ColumnInfo Id="QuantityOfItems" Caption="Кол.шт" Width="10" Index="7" DisplayFormat="{0:n}" EditMask="n" />
+        <ColumnInfo Id="TotalQuantity" Caption="Итого" Index="8" AllowEdit="True" Width="11" DisplayFormat="{0:n}" EditMask="n" />
+        <ColumnInfo Id="BestBefore" Width="12" Index="9" />
+        <ColumnInfo Id="Property" Index="10" Width="20" />
+      </Columns>
+    </ListView>
+    <ListView Id="DocTrebovanie_ListView" Caption="Требования на разгрузку" IsFooterVisible="True" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="DocState" Index="1" Width="10" />
+        <ColumnInfo Id="DocNo" Index="2" Width="20" />
+        <ColumnInfo Id="DocDateTime" Index="3" Width="20" DisplayFormat="{0:G}" />
+        <ColumnInfo Id="AllowMovement" Index="4" Width="10" />
+        <ColumnInfo Id="DocBase" Index="5" Width="30" />
+        <ColumnInfo Id="Comment" Index="6" />
+        <ColumnInfo Id="session" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="DocTrebovanie_LookupListView" Caption="Требования на разгрузку">
+      <Columns>
+        <ColumnInfo Id="AllowMovement" Index="-1" />
+        <ColumnInfo Id="DocState" Index="1" />
+        <ColumnInfo Id="DocNo" Index="2" />
+        <ColumnInfo Id="DocDateTime" Index="3" />
+        <ColumnInfo Id="session" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Goods_BarcodesCollection_ListView">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Goods_DetailView">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="GoodsCollection" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="IddSUTZ_int" Index="-1" />
+        <PropertyEditor Id="IsFolder" Index="-1" />
+        <PropertyEditor Id="ParentID" Index="-1" />
+        <PropertyEditor Id="Article" Index="1" />
+        <PropertyEditor Id="BaseUnit" Index="2" />
+        <PropertyEditor Id="CalcByVolume" Index="3" />
+        <PropertyEditor Id="Code" Index="4" />
+        <PropertyEditor Id="Comment" Index="5" />
+        <PropertyEditor Id="CountryOfProd" Caption="Страна-производитель" Index="6" />
+        <PropertyEditor Id="EnableExpDate" Index="7" />
+        <PropertyEditor Id="FilterOfMoving" Caption="Фильтр пополнения" Index="8" />
+        <PropertyEditor Id="FilterOfSelect" Index="9" />
+        <PropertyEditor Id="FullDescription" Caption="Полное наименование" Index="10" />
+        <PropertyEditor Id="GroupExpDate" Index="11" />
+        <PropertyEditor Id="IsASetOfGoods" Caption="Это комплект" Index="12" />
+        <PropertyEditor Id="Manufacturer" Index="13" />
+        <PropertyEditor Id="ShortDescription" Index="14" />
+        <PropertyEditor Id="UnitsCollection" Caption="Единицы измерения" Index="20" />
+        <PropertyEditor Id="BarcodesCollection" Caption="Штрихкоды" Index="21" />
+        <PropertyEditor Id="SetOfGoodsCollection" Index="24" Caption="Комплектация" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="53.508771929824562">
+            <LayoutGroup Id="Goods" RelativeSize="100" ShowCaption="False">
+              <LayoutGroup Id="Goods_col1" RelativeSize="48.543689320388353">
+                <LayoutItem Id="Code" SizeConstraintsType="Default" RelativeSize="15.384615384615385" Index="0" />
+                <LayoutItem Id="Article" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="1" />
+                <LayoutItem Id="ShortDescription" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="2" />
+                <LayoutItem Id="GroupExpDate" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="3" />
+                <LayoutItem Id="EnableExpDate" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="4" />
+                <LayoutItem Id="FilterOfSelect" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="5" />
+              </LayoutGroup>
+              <LayoutGroup Id="Goods_col2" RelativeSize="48.404993065187242">
+                <LayoutItem Id="BaseUnit" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="1" />
+                <LayoutItem Id="CountryOfProd" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="2" />
+                <LayoutItem Id="IsASetOfGoods" SizeConstraintsType="Default" RelativeSize="15.384615384615385" />
+                <LayoutItem Id="Manufacturer" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="3" />
+                <LayoutItem Id="ParentID" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="4" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="12.5">
+            <LayoutItem Id="FullDescription" SizeConstraintsType="Default" RelativeSize="47.368421052631582" />
+            <LayoutItem Id="Comment" SizeConstraintsType="Default" RelativeSize="52.631578947368418" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="33.991228070175438">
+            <LayoutGroup Id="UnitsCollection" TextAlignMode="AlignLocal" RelativeSize="100" Direction="Vertical" Caption="Единицы измерения" Index="0">
+              <LayoutItem Id="UnitsCollection" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="BarcodesCollection" TextAlignMode="AlignLocal" RelativeSize="100" Index="2">
+              <LayoutItem Id="BarcodesCollection" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="SetOfGoodsCollection" ShowCaption="True" Caption="Комплектация" TextAlignMode="AlignLocal" Index="3" RelativeSize="100" IsNewNode="True" Removed="True">
+              <LayoutItem Id="SetOfGoodsCollection" ShowCaption="False" TextAlignMode="AutoSize" ViewItem="SetOfGoodsCollection" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="GoodsCollection" TextAlignMode="AlignLocal" RelativeSize="100" Removed="True">
+              <LayoutItem Id="GoodsCollection" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Goods_ListView">
+      <Columns>
+        <ColumnInfo Id="CalcByVolume" Index="-1" />
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="EnableExpDate" Index="-1" />
+        <ColumnInfo Id="FilterOfMoving" Index="-1" />
+        <ColumnInfo Id="FilterOfSelect" Index="-1" />
+        <ColumnInfo Id="GroupExpDate" Index="-1" />
+        <ColumnInfo Id="IddSUTZ_int" Index="-1" />
+        <ColumnInfo Id="IsFolder" Index="-1" />
+        <ColumnInfo Id="ParentID" Index="-1" />
+        <ColumnInfo Id="ShortDescription" Index="3" />
+        <ColumnInfo Id="IsASetOfGoods" Caption="Это набор" Index="5" />
+        <ColumnInfo Id="CountryOfProd" Caption="Страна-производитель" />
+      </Columns>
+    </ListView>
+    <ListView Id="Goods_LookupListView" AllowDelete="False" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="Code" PropertyName="Code" AllowEdit="False" Index="2" Width="15" IsNewNode="True" />
+        <ColumnInfo Id="Article" PropertyName="Article" Index="3" Width="15" IsNewNode="True" />
+        <ColumnInfo Id="ShortDescription" Index="4" Width="100" />
+      </Columns>
+    </ListView>
+    <ListView Id="Goods_UnitsCollection_ListView">
+      <Columns>
+        <ColumnInfo Id="Height" Width="10" />
+        <ColumnInfo Id="Width" Width="10" />
+        <ColumnInfo Id="Depth" Width="10" />
+        <ColumnInfo Id="Weight" Width="10" DisplayFormat="{0:N}" />
+        <ColumnInfo Id="Delimeter" Removed="True" />
+        <ColumnInfo Id="Description" Removed="True" />
+        <ColumnInfo Id="idd" Removed="True" />
+        <ColumnInfo Id="ParentId" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="JobTypes_DetailView" Caption="Вид работы">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="Code" Caption="Код" />
+      </Items>
+    </DetailView>
+    <ListView Id="JobTypes_ListView" Caption="Виды работ">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="Code" Caption="Код" Index="1" />
+        <ColumnInfo Id="Description" Index="2" />
+        <ColumnInfo Id="TypeOfWork" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="JobTypes_LookupListView" Caption="Виды работ">
+      <Columns>
+        <ColumnInfo Id="Description" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="LogisticsSettings_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="LogisticsSettings" ShowCaption="False" RelativeSize="100" Direction="Vertical" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="LogisticsSettings_ListView" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="LogMessages_DetailView">
+      <Items>
+        <PropertyEditor Id="MessageText" MaxLength="0" RowCount="3" />
+      </Items>
+    </DetailView>
+    <ListView Id="LogMessages_ListView">
+      <Columns>
+        <ColumnInfo Id="RowID" PropertyName="Id" Index="1" Caption="№" IsNewNode="True" />
+        <ColumnInfo Id="MessageType" Index="2" Caption="Тип сообщения" />
+        <ColumnInfo Id="MessageTime" Index="3" Caption="Время" />
+        <ColumnInfo Id="MessageText" Index="4" Caption="Сообщение" />
+      </Columns>
+    </ListView>
+    <ListView Id="LogTypeMessages_ListView">
+      <Columns>
+        <ColumnInfo Id="objType" Caption="Тип объекта" />
+        <ColumnInfo Id="totalItemsInbound" Caption="Всего загружено" />
+        <ColumnInfo Id="forInbound" Caption="Осталось загрузить" />
+        <ColumnInfo Id="inbounded" Caption="Загружено за сессию" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Manufacturers_DetailView" Caption="Производитель">
+      <Items>
+        <PropertyEditor Id="Delimeter" Index="-1" />
+        <PropertyEditor Id="idd" Index="-1" />
+        <PropertyEditor Id="iddSUTZ" Index="-1" />
+        <PropertyEditor Id="Description" Caption="Наименование" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Manufacturers" RelativeSize="100" Direction="Vertical" ShowCaption="False" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Manufacturers_ListView" Caption="Производители">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="iddSUTZ" Index="-1" />
+        <ColumnInfo Id="Code" Width="20" Index="1" />
+        <ColumnInfo Id="Description" Caption="Наименование" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="Manufacturers_LookupListView" Caption="Производители">
+      <Columns>
+        <ColumnInfo Id="Description" Caption="Наименование" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MobileErrors_DetailView" Caption="Ошибка м.СУТЗ" />
+    <ListView Id="MobileErrors_ListView" Caption="Ошибки М.СУТЗ" />
+    <ListView Id="MobileWorkDocRows_ListView" Caption="Выполненные строки документов" DataAccessMode="Server" />
+    <DetailView Id="MobileWorkUnit_DetailView" Caption="Единица задания моб.сутз">
+      <Items>
+        <PropertyEditor Id="dTimeInsertUnit" DisplayFormat="{0:G}" EditMask="G" />
+        <PropertyEditor Id="dTimeProductionFact" DisplayFormat="{0:G}" EditMask="G" />
+        <PropertyEditor Id="QuantityFact" DisplayFormat="{0:N}" EditMask="N" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="30.804597701149426">
+            <LayoutGroup Id="MobileWorkUnit" RelativeSize="100" ShowCaption="False">
+              <LayoutGroup Id="MobileWorkUnit_col1" RelativeSize="48.542024013722127">
+                <LayoutItem Id="JobType" SizeConstraintsType="Default" Index="0" RelativeSize="23.880597014925375" />
+                <LayoutItem Id="TypeOfMobileState" SizeConstraintsType="Default" Index="1" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="TypeOfUnitWork" ViewItem="TypeOfUnitWork" SizeConstraintsType="Default" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+                <LayoutItem Id="SendedUser" SizeConstraintsType="Default" Index="3" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="AssignedUser" SizeConstraintsType="Default" Index="4" RelativeSize="22.388059701492537" />
+                <LayoutItem Id="Barcode" SizeConstraintsType="Default" Index="5" RelativeSize="18.9873417721519" Removed="True" />
+                <LayoutItem Id="idd" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="MobileWorkUnit_col2" RelativeSize="51.457975986277873">
+                <LayoutItem Id="Comment" SizeConstraintsType="Default" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="Barcode" ViewItem="Barcode" SizeConstraintsType="Default" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+                <LayoutItem Id="QuantityFact" SizeConstraintsType="Default" RelativeSize="17.910447761194028" Index="3" />
+                <LayoutItem Id="dTimeProductionFact" SizeConstraintsType="Default" RelativeSize="22.388059701492537" Index="4" />
+                <LayoutItem Id="TypeOfUnitWork" SizeConstraintsType="Default" RelativeSize="22.388059701492537" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="69.195402298850581">
+            <LayoutGroup Id="MobileWorkDocRowsCollection" TextAlignMode="AlignLocal" RelativeSize="100" Caption="Строки документа">
+              <LayoutItem Id="MobileWorkDocRowsCollection" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="MobileWorkUsersCollection" TextAlignMode="AlignLocal" RelativeSize="100" Caption="Исполнители задания">
+              <LayoutItem Id="MobileWorkUsersCollection" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MobileWorkUnit_ListView" Caption="Задания моб.сутз" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="idd" Index="1" Caption="№" />
+        <ColumnInfo Id="Barcode" Index="5" />
+        <ColumnInfo Id="dTimeInsertUnit" EditMask="G" DisplayFormat="{0:G}" />
+        <ColumnInfo Id="dTimeProductionFact" DisplayFormat="{0:G}" EditMask="G" EditMaskType="DateTime" />
+        <ColumnInfo Id="QuantityFact" EditMask="N" DisplayFormat="{0:N}" />
+      </Columns>
+    </ListView>
+    <ListView Id="MobileWorkUnit_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AssignedUser" Index="-1" />
+        <ColumnInfo Id="Barcode" Index="-1" />
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="dTimeInsertUnit" Index="-1" />
+        <ColumnInfo Id="dTimeProductionFact" Index="-1" />
+        <ColumnInfo Id="QuantityFact" Index="-1" />
+        <ColumnInfo Id="idd" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="MobileWorkUnit_MobileWorkDocRowsCollection_ListView" Caption="Выполненные строки документов" DataAccessMode="Server" />
+    <ListView Id="MobileWorkUnit_MobileWorkUsersCollection_ListView" Caption="Пользователи задания" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="Delimeter" Index="-1" />
+        <ColumnInfo Id="ErrorState" Caption="Статус ошибки" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MobileWorkUsers_DetailView" Caption="Пользователь задания" />
+    <ListView Id="MobileWorkUsers_ListView" Caption="Пользователи задания" DataAccessMode="Server" />
+    <ListView Id="NET_SUTZ_DocJobeProperties_ListView" DataAccessMode="Server" />
+    <ListView Id="NET_SUTZ_DocSpecPrihodaGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="NET_SUTZ_DocSpecPrihodaHeaders_ListView" DataAccessMode="Server" />
+    <ListView Id="NET_SUTZ_MobileWorkDocRows_ListView" DataAccessMode="Server" />
+    <ListView Id="NET_SUTZ_MobileWorkUnit_ListView" DataAccessMode="Server" />
+    <ListView Id="NET_SUTZ_MobileWorkUsers_ListView" DataAccessMode="Server" />
+    <DetailView Id="SQL_Exchange_Inbound_DetailView">
+      <Items>
+        <PropertyEditor Id="IsLoadBarcodesOfGoods" Caption="Штрихкоды" />
+        <PropertyEditor Id="IsLoadClients" Caption="Контрагенты" />
+        <PropertyEditor Id="IsLoadCountries" Caption="Страны" />
+        <PropertyEditor Id="IsLoadCustomerDivisions" Caption="Подразделения клиента" />
+        <PropertyEditor Id="IsLoadCustomerStores" Caption="Магазины клиента" />
+        <PropertyEditor Id="IsLoadDocInventory" Caption="Инвентаризация" />
+        <PropertyEditor Id="IsLoadDocInvoiceOrder" Caption="Заявка покупателя" />
+        <PropertyEditor Id="IsLoadDocSpecPeremesh" Caption="Спецификация перемещения" />
+        <PropertyEditor Id="IsLoadDocSpecPrihoda" Caption="Спецификация прихода" />
+        <PropertyEditor Id="IsLoadDocSpecRashoda" Caption="Спецификация расхода" />
+        <PropertyEditor Id="IsLoadDocTrebovanie" Caption="Требование на разгрузку" />
+        <PropertyEditor Id="isLoadGoods" Caption="Номенклатура" />
+        <PropertyEditor Id="IsLoadJobTypes" Caption="Виды работ" />
+        <PropertyEditor Id="IsLoadLogistics" Caption="Логистика" />
+        <PropertyEditor Id="IsLoadManufacturers" Caption="Производители" />
+        <PropertyEditor Id="IsLoadOKEI" Caption="ОКЕИ" />
+        <PropertyEditor Id="IsLoadProperties" Caption="Характеристики товара" />
+        <PropertyEditor Id="IsLoadStockRooms" Caption="Кладовые" />
+        <PropertyEditor Id="IsLoadStorageCodes" Caption="Коды размещения" />
+        <PropertyEditor Id="IsLoadUnitOfGoods" Caption="Единицы измерения" />
+        <PropertyEditor Id="IsLoadWarehouses" Caption="Склады" />
+        <PropertyEditor Id="IsShowMessageInLogWindow" Caption="Выводить сообщения" />
+        <ControlDetailItem Id="ProgressBarControlIn" ControlTypeName="DevExpress.XtraEditors.ProgressBarControl" Caption=" " IsNewNode="True" />
+        <ControlDetailItem Id="ProgressBarControlOut" ControlTypeName="DevExpress.XtraEditors.ProgressBarControl" Caption=" " IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <TabbedGroup Id="ГруппыВыгрузкиЗагрузки" Caption="" Index="0" RelativeSize="69.4949494949495" IsNewNode="True">
+            <LayoutGroup Id="Справочники" Caption="Справочники" Direction="Horizontal" Index="0" ShowCaption="True" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="SQL_Exchange_Inbound_col1" Index="0" ShowCaption="False" RelativeSize="44.387755102040813" IsNewNode="True">
+                <LayoutItem Id="isLoadGoods" ViewItem="isLoadGoods" Index="0" SizeConstraintsType="Default" RelativeSize="10.526315789473685" IsNewNode="True" />
+                <LayoutItem Id="IsLoadUnitOfGoods" ViewItem="IsLoadUnitOfGoods" Index="1" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadStockRooms" ViewItem="IsLoadStockRooms" Index="2" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadStorageCodes" ViewItem="IsLoadStorageCodes" Index="3" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadProperties" ViewItem="IsLoadProperties" Index="4" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadCountries" ViewItem="IsLoadCountries" Index="5" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadManufacturers" ViewItem="IsLoadManufacturers" Index="6" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadOKEI" ViewItem="IsLoadOKEI" Index="7" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadClients" ViewItem="IsLoadClients" Index="8" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadJobTypes" ViewItem="IsLoadJobTypes" Index="9" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadBarcodesOfGoods" ViewItem="IsLoadBarcodesOfGoods" Index="10" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocJobeProperties" ViewItem="IsLoadDocJobeProperties" SizeConstraintsType="Default" Index="11" RelativeSize="10.526315789473685" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="SQL_Exchange_Inbound_col2" Index="1" ShowCaption="False" RelativeSize="55.612244897959187" IsNewNode="True">
+                <LayoutItem Id="IsLoadLogistics" ViewItem="IsLoadLogistics" Index="0" SizeConstraintsType="Default" RelativeSize="10.526315789473685" IsNewNode="True" />
+                <LayoutItem Id="IsLoadCustomerDivisions" ViewItem="IsLoadCustomerDivisions" Index="1" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadCustomerStores" ViewItem="IsLoadCustomerStores" Index="2" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadWarehouses" ViewItem="IsLoadWarehouses" Index="3" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocProperties" ViewItem="IsLoadDocProperties" SizeConstraintsType="Default" Index="4" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadUsers" ViewItem="IsLoadUsers" SizeConstraintsType="Default" Index="5" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocTrebovanie" ViewItem="IsLoadDocTrebovanie" Index="6" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocInventory" ViewItem="IsLoadDocInventory" Index="7" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocInvoiceOrder" ViewItem="IsLoadDocInvoiceOrder" Index="8" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocSpecPeremesh" ViewItem="IsLoadDocSpecPeremesh" Index="9" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocSpecPrihoda" ViewItem="IsLoadDocSpecPrihoda" Index="10" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                <LayoutItem Id="IsLoadDocSpecRashoda" ViewItem="IsLoadDocSpecRashoda" Index="11" SizeConstraintsType="Default" RelativeSize="10.526315789473685" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Настройка" Caption="Настройка" Index="1" ShowCaption="True" RelativeSize="100" Direction="Horizontal" IsNewNode="True">
+              <LayoutItem Id="IsTimerEnabled" ViewItem="IsTimerEnabled" SizeConstraintsType="Default" Index="0" RelativeSize="48.129251700680271" IsNewNode="True" />
+              <LayoutItem Id="IsShowMessageInLogWindow" ViewItem="IsShowMessageInLogWindow" Index="1" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="51.870748299319729" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <TabbedGroup Id="ГруппыЛогированияДействий" Caption="Логирование действий" Index="2" RelativeSize="25.656565656565657" IsNewNode="True">
+            <LayoutGroup Id="ListOfTypeMessages" ShowCaption="True" Caption="Загружаемые объекты" TextAlignMode="AlignLocal" Index="1" RelativeSize="100" Direction="Vertical" IsNewNode="True">
+              <LayoutItem Id="ProgressBarControlIn" ViewItem="ProgressBarControlMy" SizeConstraintsType="Default" Index="1" RelativeSize="4.8484848484848486" IsNewNode="True" />
+              <LayoutItem Id="ListOfTypeMessages" ShowCaption="False" TextAlignMode="AutoSize" SizeConstraintsType="Default" Index="2" RelativeSize="100" ViewItem="ListOfTypeMessages" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListOfMessages" Index="2" Direction="Vertical" ShowCaption="True" Caption="Логи загрузки" TextAlignMode="AlignLocal" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="ListOfMessages" ViewItem="ListOfMessages" ShowCaption="False" Index="0" TextAlignMode="AutoSize" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListOfTypeOUTMessage" Caption="Выгружаемые объекты" Index="3" IsNewNode="True">
+              <LayoutItem Id="ProgressBarControlOut" Index="1" IsNewNode="True" />
+              <LayoutItem Id="ListOfTypeOUTMessages" ViewItem="ListOfTypeOUTMessages" Index="2" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListOfOUTMessages" Index="4" Caption="Логи выгрузки" IsNewNode="True">
+              <LayoutItem Id="ListOfOUTMessages" ViewItem="ListOfOUTMessages" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" Removed="True">
+            <LayoutGroup Id="SQL_Exchange_Inbound" Removed="True">
+              <LayoutGroup Id="SQL_Exchange_Inbound_col1" Removed="True" />
+              <LayoutGroup Id="SQL_Exchange_Inbound_col2" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="13.131313131313132" Removed="True">
+            <LayoutGroup Id="ListOfTypeMessages" TextAlignMode="UseParentOptions" RelativeSize="0" Index="0" Direction="Horizontal" Caption="Список загружаемых объектов">
+              <LayoutItem Id="ListOfTypeMessages" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListOfMessages" Direction="Horizontal" RelativeSize="0" Caption="Список всех сообщений" Removed="True">
+              <LayoutItem Id="ListOfMessages" Removed="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SQL_Exchange_Inbound_ListOfMessages_ListView" Caption="Сообщения">
+      <Columns>
+        <ColumnInfo Id="Line no" PropertyName="Id" Caption="№ строки" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="MessageTime" Caption="Время" Index="2" />
+        <ColumnInfo Id="MessageType" Caption="Тип сообщения" Index="3" />
+        <ColumnInfo Id="MessageText" Caption="Сообщение" Index="4" />
+      </Columns>
+      <Sorting>
+        <SortProperty Id="Сортировка по типу" PropertyName="MessageType" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <ListView Id="SQL_Exchange_Inbound_ListOfTypeMessages_ListView" Caption="Типы загружаемых объектов">
+      <Columns>
+        <ColumnInfo Id="Id" Index="1" Caption="№" />
+        <ColumnInfo Id="forInbound" Caption="Осталось загрузить" />
+        <ColumnInfo Id="objType" Caption="Тип объекта" Index="2" />
+        <ColumnInfo Id="inbounded" Caption="Загружено" />
+        <ColumnInfo Id="totalItemsInbound" Index="4" Caption="Всего загружено" />
+        <ColumnInfo Id="percentage" Index="5" PropertyEditorType="SUTZ_2.Module.PropertyEditors.CustomWinProgressBarEditor" Caption="% выполнения" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="StandardFormWithCustomUserControl" Caption="Standard Form With Custom User Control" ImageName="BO_Address" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItem Id="CustomUserControlViewItem" IsNewNode="True" />
+      </Items>
+    </DashboardView>
+    <ListView Id="SUTZ_NET_BarcodesOfGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Clients_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Countries_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_CustomerStores_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_CustomerUnits_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocInventoryGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocInventoryHeaders_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocInventoryHeaders_SUTZ_NET_DocInventoryGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocInvoiceOrderGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocInvoiceOrderHeaders_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocInvoiceOrderHeaders_SUTZ_NET_DocInvoiceOrderGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocJobeProperties_ListView" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="dTimeWrite" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" />
+        <ColumnInfo Id="dTimeRead" DisplayFormat="{0: dd.MM.yyyy hh:mm:ss.fff tt}" EditMaskType="DateTime" />
+      </Columns>
+    </ListView>
+    <ListView Id="SUTZ_NET_DocProperties_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecPeremeshGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecPeremeshHeaders_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecPeremeshHeaders_SUTZ_NET_DocSpecPeremeshGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecPrihodaGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecPrihodaHeaders_ListView" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="row_id" Index="0" />
+        <ColumnInfo Id="iddSUTZ_guid" Index="1" />
+        <ColumnInfo Id="Delimeter" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="SUTZ_NET_DocSpecPrihodaHeaders_SUTZ_NET_DocSpecPrihodaGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecRashodaGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecRashodaHeaders_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocSpecRashodaHeaders_SUTZ_NET_DocSpecRashodaGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocTrebovanieGoods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocTrebovanieHeaders_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_DocTrebovanieHeaders_SUTZ_NET_DocTrebovanieGoodsCollection_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Goods_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_HostsUsers_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_JobTypes_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Logistics_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Manufacturers_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_OKEI_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Properties_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_StockRooms_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_StorageCodes_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Units_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Users_ListView" DataAccessMode="Server" />
+    <ListView Id="SUTZ_NET_Warehouses_ListView" DataAccessMode="Server" />
+    <DetailView Id="Users_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Users" Caption="Пользователь" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Users_UserSettingsCollection_ListView" Caption="Настройки пользователя" />
+    <ListView Id="Users_UsersRoles_ListView" Caption="Набор прав" />
+  </Views>
+</Application>

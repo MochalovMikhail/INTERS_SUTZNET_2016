@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleUniqueValue Id="Users_UserNameIsUnique" CustomMessageTemplate="Пользователь с таким именем уже зарегистрирован в системе!" />
+    </Rules>
+  </Validation>
+</Application>

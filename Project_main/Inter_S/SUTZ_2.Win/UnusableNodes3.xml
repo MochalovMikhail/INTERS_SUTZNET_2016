@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="StorageCodes_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Deleted" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="StorageCodes_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Deleted" Index="-1" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StorageCodes">
+              <LayoutGroup Id="StorageCodes_col2">
+                <LayoutItem Id="CodeOfCell" ViewItem="CodeOfCell" />
+              </LayoutGroup>
+              <LayoutGroup Id="StorageCodes_col1">
+                <LayoutItem Id="Code" SizeConstraintsType="Default" Index="0" RelativeSize="8" ViewItem="Code" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

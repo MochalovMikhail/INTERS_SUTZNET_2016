@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SQL_Exchange_Inbound">
+      <OwnMembers>
+        <!--<Member Name="IsLoadBarcodesOfGoods" IsCustom="True" IsCalculated="True" Type="System.Boolean" Expression="1=1" Caption="Штрихкоды" PropertyEditorType="DevExpress.ExpressApp.Win.Editors.BooleanPropertyEditor" IsNewNode="True" /> -->
+        <Member Name="IsLoadClients" Caption="Контрагенты" />
+        <Member Name="IsLoadCountries" Caption="Страны" />
+        <Member Name="IsLoadCustomerDivisions" Caption="Подразделения контрагентов" />
+        <Member Name="IsLoadCustomerStores" Caption="Магазины контрагентов" />
+        <Member Name="IsLoadDocInventory" Caption="Инвентаризации" />
+        <Member Name="IsLoadDocInvoiceOrder" Caption="Заявка покупателя" />
+        <Member Name="IsLoadDocSpecPeremesh" Caption="Спецификация перемещения" />
+        <Member Name="IsLoadDocSpecPrihoda" Caption="Спецификация прихода" />
+        <Member Name="IsLoadDocSpecRashoda" Caption="Отборочный лист" />
+        <Member Name="IsLoadDocTrebovanie" Caption="Требование на разгрузку" />
+        <Member Name="isLoadGoods" Caption="Номенклатура" />
+        <Member Name="IsLoadJobTypes" Caption="Виды работ" />
+        <Member Name="IsLoadLogistics" Caption="Логистические настройки" />
+        <Member Name="IsLoadManufacturers" Caption="Производители" />
+        <Member Name="IsLoadOKEI" Caption="Классификатор единиц (ОКЕИ)" />
+        <Member Name="IsLoadProperties" Caption="Характеристики товара" />
+        <Member Name="IsLoadStockRooms" Caption="Кладовые" />
+        <Member Name="IsLoadStorageCodes" Caption="Коды размещения" />
+        <Member Name="IsLoadUnitOfGoods" Caption="Единицы измерения" />
+        <Member Name="IsLoadWarehouses" Caption="Склады" />
+        <!--<Member Name="IsShowMessageInLogWindow" IsCustom="True" IsCalculated="True" Type="System.Boolean" Expression="1=1" PropertyEditorType="DevExpress.ExpressApp.Win.Editors.BooleanPropertyEditor" Caption="Выводить сообщения" IsNewNode="True" /> -->
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.Delimeters" FriendlyKeyProperty="Description" Caption="Разделители учета">
+      <OwnMembers>
+        <Member Name="DelimeterID" PropertyEditorType="DevExpress.ExpressApp.Win.Editors.DefaultPropertyEditor" />
+        <Member Name="idd" AllowEdit="True" Caption="Идентификатор" ToolTip="Уникальный идентификатор разделителя учета. Нельзя изменять после создания.&#xD;&#xA;" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.Goods" FriendlyKeyProperty="ShortDescription" ImageName="BO_Product" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" DefaultListViewAllowEdit="False">
+      <AppearanceRules>
+        <AppearanceRule Id="StrikeItemWhenDeleted" FontStyle="Strikeout" Index="1" Priority="1" TargetItems="*" Criteria="[IsMarkDeleted] = True" Context="ListView" IsNewNode="True" />
+        <AppearanceRule Id="HideUnitsWhenTheyNotAvailable" Criteria="[IsASetOfGoods] &lt;&gt; True" Enabled="False" TargetItems="SetOfGoodsCollection" AppearanceItemType="ViewItem" Context="DetailView" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="BaseUnit" DataSourceProperty="UnitsCollection" />
+        <Member Name="CountryOfProd" Caption="Страна-производитель" />
+        <Member Name="FilterOfMoving" Caption="Фильтр перемещения" />
+        <Member Name="GoodsCollection" ImmediatePostData="False" />
+        <Member Name="IsASetOfGoods" Caption="Это набор" ImmediatePostData="True" />
+        <Member Name="IsFolder" Caption="Это группа" />
+        <Member Name="SetOfGoodsCollection" Caption="Комплектация" />
+        <Member Name="UnitsCollection" Caption="Единицы измерения" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.JobTypes" Caption="Виды складских работ" />
+    <Class Name="SUTZ_2.Module.BO.References.OKEI" Caption="Классификатор единиц измерения" />
+    <Class Name="SUTZ_2.Module.BO.References.SetOfGoods" Caption="Комплект" />
+    <Class Name="SUTZ_2.Module.BO.References.StockRooms" FriendlyKeyProperty="Description" Caption="Кладовые" />
+    <Class Name="SUTZ_2.Module.BO.References.StorageCodes" Caption="Коды размещения" ImageName="" />
+    <Class Name="SUTZ_2.Module.BO.References.Units" Caption="Единицы измерения">
+      <AppearanceRules>
+        <AppearanceRule Id="DisableMultiCaseUnitID" TargetItems="MultiCaseUnitID" Context="DetailView" Enabled="False" Index="1" AppearanceItemType="ViewItem" Priority="1" Criteria="[IsMultiCase]!=True" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="Description" AllowEdit="False" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SUTZ_2.Module.BO.References.Users" FriendlyKeyProperty="Description" Caption="Пользователи">
+      <OwnMembers>
+        <Member Name="DefaultDelimeter" Caption="Разделитель по умолчанию" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Namespaces">
+      <LocalizationItem Name="DevExpress.ExpressApp.Security" Value="Настройка безопасности" />
+      <LocalizationItem Name="SUTZ_2.Module.BO.References" Value="Справочники" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems NavigationStyle="TreeList" />
+  <Options UIType="TabbedMDI" UseServerMode="False" RestoreTabbedMdiLayout="False" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="13.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="13.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleRequiredField Id="LogisticsSettings_ValueIsNotEmpty" TargetCollectionOwnerType="" TargetPropertyName="LogisticValue" TargetType="SUTZ_2.Module.BO.References.LogisticsSettings" TargetContextIDs="Save" MessageTemplateMustNotBeEmpty="&quot;{TargetPropertyName}&quot; должно быть заполнено" SkipNullOrEmptyValues="True" TargetCriteria="[idd] = 0" IsNewNode="True" />
+    </Rules>
+  </Validation>
+  <Views>
+    <DetailView Id="SecuritySystemRoleBase_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="43" ImageName="">
+            <LayoutGroup Id="SecuritySystemRoleBase" RelativeSize="100" ImageName="">
+              <LayoutItem Id="Name" SizeConstraintsType="Default" RelativeSize="37" ViewItem="Name" />
+              <LayoutItem Id="IsAdministrative" SizeConstraintsType="Default" RelativeSize="27" ViewItem="IsAdministrative" />
+              <LayoutItem Id="CanEditModel" SizeConstraintsType="Default" RelativeSize="34" ViewItem="CanEditModel" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TypePermissions_Group" Index="1" RelativeSize="56" Caption="Type Permissions" ImageName="BO_Security_Permission_Type" Direction="Vertical">
+            <LayoutItem Id="TypePermissions" SizeConstraintsType="Default" Index="0" RelativeSize="70" ViewItem="TypePermissions" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SecuritySystemTypePermissionObject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" Caption="Main" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Caption="SimpleEditors" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions" RelativeSize="17">
+            <LayoutGroup Id="SecuritySystemTypePermissionsObjectBase_col1" ImageName="" Caption="SecuritySystemTypePermissionsObjectBase_col1" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions" Direction="Vertical">
+              <LayoutItem Id="TargetType" SizeConstraintsType="Default" RelativeSize="47" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="TargetType" />
+              <LayoutGroup Id="Item1" RelativeSize="52" ImageName="" Caption="Item1" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+                <LayoutItem Id="AllowRead" SizeConstraintsType="Default" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="AllowRead" />
+                <LayoutItem Id="AllowWrite" SizeConstraintsType="Default" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="AllowWrite" />
+                <LayoutItem Id="AllowCreate" SizeConstraintsType="Default" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="AllowCreate" />
+                <LayoutItem Id="AllowDelete" SizeConstraintsType="Default" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="AllowDelete" />
+                <LayoutItem Id="AllowNavigate" SizeConstraintsType="Default" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="AllowNavigate" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="82" Index="1">
+            <LayoutGroup Id="MemberPermissions" Caption="Разрешения на поля" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="AlignLocal" RelativeSize="100">
+              <LayoutItem Id="MemberPermissions" TextAlignMode="AutoSize" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" SizeConstraintsType="Default" RelativeSize="100" Index="0" ViewItem="MemberPermissions" />
+            </LayoutGroup>
+            <LayoutGroup Id="ObjectPermissions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="AlignLocal" RelativeSize="100" Caption="Разрешения на объекты">
+              <LayoutItem Id="ObjectPermissions" TextAlignMode="AutoSize" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" SizeConstraintsType="Default" RelativeSize="100" ViewItem="ObjectPermissions" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

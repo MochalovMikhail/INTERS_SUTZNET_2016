@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="SQL_Exchange_Inbound_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="MessageWindow" Caption="Лог" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Index="1" RelativeSize="20" Removed="True">
+            <LayoutItem Id="MessageWindow" SizeConstraintsType="Default" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="ГруппыЛогированияДействий">
+            <LayoutGroup Id="ListOfMessagesSimple">
+              <LayoutItem Id="ListOfMessagesSimple" ViewItem="ListOfMessagesSimple" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

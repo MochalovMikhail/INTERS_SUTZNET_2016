@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="SQL_Exchange_Inbound_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="ListOfMessages_Group" Direction="Vertical" RelativeSize="41.2">
+            <LayoutItem Id="ListOfMessages" SizeConstraintsType="Default" RelativeSize="91.909385113268613" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

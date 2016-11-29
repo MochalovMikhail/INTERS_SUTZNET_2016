@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="documentManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>357, 17</value>
+  </metadata>
+  <metadata name="actionsContainersManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>501, 17</value>
+  </metadata>
+  <metadata name="modelSynchronizationManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="formStateModelSynchronizerComponent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>160, 54</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>81</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SymbolMainFormTemplate2.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="SymbolMainFormTemplate2.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>472, 613</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="viewSitePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="viewSitePanel.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="viewSitePanel.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="labelControlJobType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="labelControlJobType.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="labelControlJobType.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 48pt</value>
+  </data>
+  <data name="labelControlJobType.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="labelControlJobType.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v16.1">
+    <value>None</value>
+  </data>
+  <data name="labelControlJobType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="labelControlJobType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 398</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelControlJobType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelControlJobType.Text" xml:space="preserve">
+    <value>controlText</value>
+  </data>
+  <data name="&gt;&gt;labelControlJobType.Name" xml:space="preserve">
+    <value>labelControlJobType</value>
+  </data>
+  <data name="&gt;&gt;labelControlJobType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControlJobType.Parent" xml:space="preserve">
+    <value>viewSitePanel</value>
+  </data>
+  <data name="&gt;&gt;labelControlJobType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonBeginWork.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="buttonBeginWork.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 36pt</value>
+  </data>
+  <data name="buttonBeginWork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 407</value>
+  </data>
+  <data name="buttonBeginWork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="buttonBeginWork.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonBeginWork.Text" xml:space="preserve">
+    <value>Начать работу</value>
+  </data>
+  <data name="&gt;&gt;buttonBeginWork.Name" xml:space="preserve">
+    <value>buttonBeginWork</value>
+  </data>
+  <data name="&gt;&gt;buttonBeginWork.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;buttonBeginWork.Parent" xml:space="preserve">
+    <value>viewSitePanel</value>
+  </data>
+  <data name="&gt;&gt;buttonBeginWork.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonSelectJobType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="buttonSelectJobType.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 36pt</value>
+  </data>
+  <data name="buttonSelectJobType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 478</value>
+  </data>
+  <data name="buttonSelectJobType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="buttonSelectJobType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonSelectJobType.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectJobType.Name" xml:space="preserve">
+    <value>buttonSelectJobType</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectJobType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectJobType.Parent" xml:space="preserve">
+    <value>viewSitePanel</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectJobType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="buttonExit.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 36pt</value>
+  </data>
+  <data name="buttonExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 548</value>
+  </data>
+  <data name="buttonExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="buttonExit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonExit.Text" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.Name" xml:space="preserve">
+    <value>buttonExit</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.Parent" xml:space="preserve">
+    <value>viewSitePanel</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="viewSitePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="viewSitePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 613</value>
+  </data>
+  <data name="viewSitePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;viewSitePanel.Name" xml:space="preserve">
+    <value>viewSitePanel</value>
+  </data>
+  <data name="&gt;&gt;viewSitePanel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;viewSitePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;viewSitePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>480, 640</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>480, 640</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Mobile SUTZ</value>
+  </data>
+  <data name="&gt;&gt;documentManager.Name" xml:space="preserve">
+    <value>documentManager</value>
+  </data>
+  <data name="&gt;&gt;documentManager.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking2010.DocumentManager, DevExpress.XtraBars.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;actionsContainersManager.Name" xml:space="preserve">
+    <value>actionsContainersManager</value>
+  </data>
+  <data name="&gt;&gt;actionsContainersManager.Type" xml:space="preserve">
+    <value>DevExpress.ExpressApp.Win.Templates.ActionContainersManager, DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;modelSynchronizationManager.Name" xml:space="preserve">
+    <value>modelSynchronizationManager</value>
+  </data>
+  <data name="&gt;&gt;modelSynchronizationManager.Type" xml:space="preserve">
+    <value>DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager, DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;viewSiteManager.Name" xml:space="preserve">
+    <value>viewSiteManager</value>
+  </data>
+  <data name="&gt;&gt;viewSiteManager.Type" xml:space="preserve">
+    <value>DevExpress.ExpressApp.Win.Templates.ViewSiteManager, DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;mainBarAndDockingController.Name" xml:space="preserve">
+    <value>mainBarAndDockingController</value>
+  </data>
+  <data name="&gt;&gt;mainBarAndDockingController.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarAndDockingController, DevExpress.XtraBars.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;mainDockManager.Name" xml:space="preserve">
+    <value>mainDockManager</value>
+  </data>
+  <data name="&gt;&gt;mainDockManager.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockManager, DevExpress.XtraBars.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barSubItemPanels.Name" xml:space="preserve">
+    <value>barSubItemPanels</value>
+  </data>
+  <data name="&gt;&gt;barSubItemPanels.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Window.Name" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="&gt;&gt;Window.Type" xml:space="preserve">
+    <value>DevExpress.ExpressApp.Win.Templates.ActionContainers.ActionContainerBarItem, DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;formStateModelSynchronizerComponent.Name" xml:space="preserve">
+    <value>formStateModelSynchronizerComponent</value>
+  </data>
+  <data name="&gt;&gt;formStateModelSynchronizerComponent.Type" xml:space="preserve">
+    <value>DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer, DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SymbolMainFormTemplate2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.ExpressApp.Win.Templates.MainFormTemplateBase, DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <metadata name="viewSiteManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>221, 17</value>
+  </metadata>
+  <metadata name="mainBarAndDockingController.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>683, 17</value>
+  </metadata>
+  <metadata name="mainDockManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <data name="Window.Caption" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="Window.TargetPageCaption" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Window.TargetPageGroupCaption" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+</root>

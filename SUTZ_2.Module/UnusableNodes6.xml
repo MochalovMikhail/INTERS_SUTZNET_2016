@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SQL_Exchange_Inbound_ListOfTypeMessages_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="progressBarColumn" PropertyEditorType="DevExpress.XtraEditors.ProgressBarControl" PropertyName="progressBarColumn" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

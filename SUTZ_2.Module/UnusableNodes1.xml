@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SQL_Exchange_Inbound_ListOfTypeMessages_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Id" Index="1" Caption="№" />
+        <ColumnInfo Id="objType" Index="2" Caption="Тип объекта" />
+        <ColumnInfo Id="totalItemsInbound" Index="3" Caption="Всего загружено" />
+        <ColumnInfo Id="forInbound" Index="4" Caption="Осталось загрузить" />
+        <ColumnInfo Id="inbounded" Index="5" Caption="Загружено в сеансе" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SQL_Exchange_Inbound_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="ListOfTypeMessages" LinkView="LogTypeMessages_LookupListView" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" RelativeSize="46.666666666666664" Removed="True">
+            <LayoutGroup Id="ListOfMessages" TextAlignMode="UseParentOptions" RelativeSize="0" Direction="Horizontal" Caption="Список сообщений">
+              <LayoutItem Id="ListOfMessages" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListOfMessagesSimple" Removed="True" />
+          </TabbedGroup>
+          <TabbedGroup Id="ГруппыЛогированияДействий">
+            <LayoutGroup Id="ListOfMessagesSimple">
+              <LayoutItem Id="ListOfTypeMessages" ViewItem="ListOfTypeMessages" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

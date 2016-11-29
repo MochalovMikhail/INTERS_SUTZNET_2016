@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1d8c7e81-cc5a-4ad4-8303-578afe643776" namespace="SUTZ_2.Module.BO.Documents" dataBaseShemaInfo="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" generateStoredProcedures="false" fieldNameCase="Unchanged" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="2799915d-e168-405a-b177-082599677d7f">
+      <xpObject Id="240ebf90-b780-4b08-a5ca-196c891f63fa" name="BaseDocument" baseClass="XPBaseObject" userFileName="BaseDocument" designerFileName="BaseDocument.Designer" className="BaseDocument" virtualBaseClass="XPBaseObject" persistent="Table_100" virtualName="BaseDocument">
+        <fields>
+          <generalXpObjectHasFields Id="1f8a70d4-add8-4e12-8d86-2d0238793c66">
+            <field Id="c860f0f2-43eb-4c91-b126-9326319e5ef4" name="idd" columnType="Int32" key="true" isIdentity="true" displayName="idd" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="199be71a-e2bb-4d0f-964f-7955f52d2c17">
+            <field Id="c2af4764-af90-4cd7-95fa-ecb5da8abcee" name="DocNo" displayName="Номер документа" persistent="f002" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2e75cd06-2263-4dd4-a1d8-c10f447adbab">
+            <field Id="17fffff2-d97c-4517-90bf-2ec7aa20483c" name="Delimeter" columnType="DateTime" persistent="f003" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3f6f8220-2ec1-4fa2-ad86-f06ef1f0c1d1">
+            <field Id="0441d98b-4614-4925-b87a-785449e57217" name="DocDateTime" columnType="DateTime" displayName="Дата документа" persistent="f004" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ade25c5d-3b6b-4f63-9d15-4ef14c16f286">
+            <field Id="e4d7cd6c-ebed-469e-adbd-3f0b0ef67f1c" name="DocState" columnType="Single" displayName="Статус документа" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.DocStates" logicalType="SUTZ_2.Module.BO.DocStates" delayedUpdateModifiedOnly="false" xMLDocComments="Статус документа - записан, проведен, удален." />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c52c9c74-039d-4d4d-b68f-c8d728098187">
+            <field Id="880ea1fc-7856-4896-9f75-b19390ec5aa5" name="Comment" displayName="Комментарий" persistent="f006" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="77d4784f-e4f0-4244-99d2-2c7c3e212eb3">
+            <field Id="d07ede90-26ab-46e4-b5e1-abc90ac23d54" name="DocBase" displayName="Документ-основание" persistent="f007" virtualColumnType="BaseDocument" logicalType="BaseDocument" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="638a6107-ea25-4a72-ab56-f5f299b10684">
+            <field Id="8696ebb6-c372-4835-8364-b8f55d027f39" name="idGUID" columnType="Guid" persistent="f008" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d1c443b0-5e3c-43b4-a173-ffa578236316">
+            <field Id="f037185b-f8d8-41d8-b3a0-a8e5cf7e6816" name="FirstSign" persistent="f009" virtualColumnType="SUTZ_2.Module.BO.enDocPropertyStatus" logicalType="SUTZ_2.Module.BO.enDocPropertyStatus" delayedUpdateModifiedOnly="false" xMLDocComments="Первый знак журнала документов" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8cbf58a8-7983-4f87-acf0-889ba687f654">
+            <field Id="32d9fb0f-963e-446e-bdf6-7b97bb27d919" name="SecondSign" persistent="f010" virtualColumnType="SUTZ_2.Module.BO.enDocPropertyStatus" logicalType="SUTZ_2.Module.BO.enDocPropertyStatus" delayedUpdateModifiedOnly="false" xMLDocComments="Второй знак пиктограммы журнала документов" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a77c676e-bea7-4f46-859a-c5a902dec730">
+            <field Id="4ce0eb63-b9e4-401e-a269-ac18872f7a80" name="ThirdSign" persistent="f011" virtualColumnType="SUTZ_2.Module.BO.enDocPropertyStatus" logicalType="SUTZ_2.Module.BO.enDocPropertyStatus" delayedUpdateModifiedOnly="false" xMLDocComments="Третий знак журнала документов" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="db97b6ee-a290-449b-be4b-acb5af62a672">
+            <field Id="edadb39f-2b4e-41a3-ac48-c9ac463395f7" name="FourthSign" persistent="f012" virtualColumnType="SUTZ_2.Module.BO.enDocPropertyStatus" logicalType="SUTZ_2.Module.BO.enDocPropertyStatus" delayedUpdateModifiedOnly="false" xMLDocComments="Четвертый знак журнала документов" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9b0a9ce1-0796-4bc8-b919-65df5e05d655">
+            <field Id="a9ba85c3-a856-4599-a3eb-8eb38fc85c76" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f013" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="08d3451d-93e7-419d-9a17-74a89d183b4e">
+            <field Id="c7d8d726-dd0b-4912-8c40-72405852c6a9" name="DocumentType" displayName="Вид документа" virtualColumnType="SUTZ_2.Module.BO.enDocumentType" logicalType="SUTZ_2.Module.BO.enDocumentType" nonPersistent="true" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="886abcb4-bc13-450b-a5ac-588a649326f7">
+            <field Id="4eb31aae-5b29-4afb-892d-f4ec65b6ef81" name="Sender" displayName="Отправитель" virtualColumnType="String" nonPersistent="true" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a5920882-43b8-4001-827f-81368633d647">
+            <field Id="4435401d-3f7c-48a4-a18b-37c30484af22" name="Recipient" displayName="Получатель" virtualColumnType="String" nonPersistent="true" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="38abfadb-70f3-4a2f-82d9-521e90cc46cb">
+            <field Id="e0a7b770-a082-45e8-8252-cf88c7a070f9" name="Quantity" columnType="Decimal" displayName="Количество" virtualColumnType="Decimal" nonPersistent="true" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="bcf8d188-a38c-40a4-92ec-95bb392d8e4a">
+            <index Id="841f591e-f5a2-4ed2-83ee-3d4dd193e3cc" name="Index_idGUID" unique="true">
+              <fieldsInIndex>
+                <indexReferencesFields Id="0e62c337-72f2-47f5-bd3d-04168056d970">
+                  <fieldMoniker Id="8696ebb6-c372-4835-8364-b8f55d027f39" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+          <xpObjectHasIndexes Id="b2ea2e86-75c0-4767-a546-dbcd130a2ab1">
+            <index Id="acb05038-d5a6-486d-a5b8-ccc66ea139a0" name="Index_DocNo">
+              <fieldsInIndex>
+                <indexReferencesFields Id="a7a36c08-09ee-4a50-ac5b-8c4044254421">
+                  <fieldMoniker Id="c2af4764-af90-4cd7-95fa-ecb5da8abcee" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+          <xpObjectHasIndexes Id="caa61f58-da09-4f40-bbfe-e87c07d12a04">
+            <index Id="c52ca4a0-aeab-4c12-ac21-0b5a031f7267" name="Index_DocumentType">
+              <fieldsInIndex>
+                <indexReferencesFields Id="49e8860c-2c26-4140-bd86-191f6a653245">
+                  <fieldMoniker Id="c7d8d726-dd0b-4912-8c40-72405852c6a9" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="fd220a90-bf47-423e-9b92-f773c12faba2">
+      <xpObject Id="650ff50b-1319-4799-b3e1-f467653bb90c" name="DocTrebovanie" baseClass="BaseDocument" userFileName="DocTrebovanie" designerFileName="DocTrebovanie.Designer" className="DocTrebovanie" virtualBaseClass="BaseDocument" persistent="Table_110" mapInheritance="OwnTable" virtualName="DocTrebovanie">
+        <fields>
+          <generalXpObjectHasFields Id="2415ae48-634b-4b4e-9836-40cd02e50222">
+            <field Id="30742bef-410a-4fc4-bafb-1a493034efb4" name="AllowMovement" columnType="Boolean" displayName="РазрешитьДвижение" persistent="f050" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="12d21e38-e116-454f-a60e-87616b32e15a">
+            <xpObjectMoniker Id="240ebf90-b780-4b08-a5ca-196c891f63fa" />
+          </inheritance>
+        </superClass>
+        <aggrTarget>
+          <aggregation Id="1020be7e-871c-4d6c-8b9e-6f65169a10a1" sourceCollectionName="DocTrebovanieGoodsCollection" name="DocTrebovanieGoodsReferencesDocTrebovanie" targetFieldName="ParentID">
+            <xpObjectMoniker Id="94b8633e-5292-4f9c-98e5-19eaf05d2137" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="9dd0c412-219a-4b12-a850-cfe7101ec35a">
+            <collectionField Id="bdfac4f1-3248-4eff-b87b-bcefda9652da" name="DocTrebovanieGoodsCollection" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="197e2a9c-a3ed-47a5-aea9-54e7dc70862d">
+      <xpObject Id="16858354-05b7-42a5-af95-ffeb997f0b6e" name="DocInvoiceOrder" baseClass="BaseDocument" userFileName="DocInvoiceOrder" designerFileName="DocInvoiceOrder.Designer" className="DocInvoiceOrder" virtualBaseClass="BaseDocument" persistent="Table_120" mapInheritance="OwnTable" virtualName="DocInvoiceOrder">
+        <fields>
+          <generalXpObjectHasFields Id="0a44c211-ef0f-49a1-a935-583830b2737b">
+            <field Id="1a68dcc5-3906-47d0-bb2f-9fac2df0b37d" name="ExecutionDate" columnType="DateTime" displayName="Дата исполнения" persistent="f050" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7322b4d4-9a26-48b1-9715-b61d59b9d111">
+            <field Id="24f5606b-3343-4506-8720-b922a318e9ec" name="Client" columnType="Char" displayName="Клиент" persistent="f051" virtualColumnType="SUTZ_2.Module.BO.References.Clients" logicalType="SUTZ_2.Module.BO.References.Clients" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="05dcb0af-7d7e-487c-9cf1-a25720a6af02">
+            <field Id="94d4d9a9-d30c-4951-bbdf-21d5ab64131e" name="StatusASU" displayName="Статус АСУ" persistent="f052" virtualColumnType="SUTZ_2.Module.BO.DocStatesASUInvoice" logicalType="SUTZ_2.Module.BO.DocStatesASUInvoice" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9e8e22a2-6746-453a-9f94-9d940116c2e7">
+            <field Id="db5c4f30-985e-4366-828e-0b4463fd5a01" name="Unloaded" columnType="Boolean" displayName="Выгружен" persistent="f053" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" xMLDocComments="Документ выгружен в АСУ" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="14f6fac3-b322-45c4-b78a-9c86ada09004">
+            <field Id="b3c8fd9d-ca47-4e88-b8a6-d3ba052a9302" name="Printed" columnType="Boolean" displayName="Распечатан" persistent="f054" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6e63229e-5f30-4656-b425-171f7f493e42">
+            <field Id="e4c45e57-a733-4a35-bf14-d826672c788f" name="Warehouse" displayName="Склад" persistent="f055" virtualColumnType="SUTZ_2.Module.BO.References.Warehouses" logicalType="SUTZ_2.Module.BO.References.Warehouses" delayedUpdateModifiedOnly="false" xMLDocComments="Склад-отправитель" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a507ac04-aeee-4292-9f25-085005f3989c">
+            <field Id="811468e0-bd2d-48a9-876f-dc0103d3905a" name="Shipped" columnType="Boolean" displayName="Товар отгружен" persistent="f056" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" xMLDocComments="Товар отгружен" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cfcd6b95-a6ab-4cc0-a64f-710b0168d61e">
+            <field Id="f8392fe5-2998-41a9-8af5-86cf5e041bf6" name="DeliveryType" displayName="Вид отправки" persistent="f057" virtualColumnType="SUTZ_2.Module.BO.enDeliveryTypes" logicalType="SUTZ_2.Module.BO.enDeliveryTypes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bd8f6a80-5bd1-4ee2-9a64-5fe6237cf16a">
+            <field Id="31cf93d2-fcea-462e-8610-c1471db6c0ff" name="ClientDivision" displayName="Подразделение клиента" persistent="f058" virtualColumnType="SUTZ_2.Module.BO.References.ClientDivisions" logicalType="SUTZ_2.Module.BO.References.ClientDivisions" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="603d7168-f05d-413d-819b-189d4a6acb58">
+            <field Id="aea3c12c-169d-48b4-9a7d-acecf5606379" name="ClientShop" displayName="Магазин клиента" persistent="f059" virtualColumnType="SUTZ_2.Module.BO.References.ClientShops" logicalType="SUTZ_2.Module.BO.References.ClientShops" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="efcca7ca-7205-4bcf-8215-c0d852cfd73f">
+            <xpObjectMoniker Id="240ebf90-b780-4b08-a5ca-196c891f63fa" />
+          </inheritance>
+        </superClass>
+        <aggrTarget>
+          <aggregation Id="13c4ebb1-97b2-4131-bee8-f67e4bf66fdd" sourceCollectionName="DocListOfGoods" name="DocListOfGoodsInvoiceOrderReferencesDocInvoiceOrder" targetFieldName="ParentID">
+            <xpObjectMoniker Id="b9571108-a24c-4793-b593-b6bce0545259" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="9548df50-a69f-4b8f-82a4-98185410eb0f">
+            <collectionField Id="08a87d24-a823-4627-a8fc-9a0d823d43d4" name="DocListOfGoods" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="1e5df029-7566-4fdc-a3fb-90b94e1b07fd">
+      <xpObject Id="94b8633e-5292-4f9c-98e5-19eaf05d2137" name="DocTrebovanieGoods" baseClass="XPBaseObject" userFileName="DocListOfGoodsTrebovanie" designerFileName="DocListOfGoodsTrebovanie.Designer" className="DocTrebovanieGoods" virtualBaseClass="XPBaseObject" persistent="Table_111" virtualName="DocTrebovanieGoods">
+        <fields>
+          <generalXpObjectHasFields Id="de236413-b845-4399-bb14-57510263f486">
+            <field Id="5d08361a-e8e7-4199-b2a4-df7b8c1e4249" name="idd" columnType="Int32" key="true" isIdentity="true" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="db77b7c2-631f-46d6-9379-7e713e041c22">
+            <field Id="7330b093-2b68-43dd-96ba-b7ae5dfdf2e4" name="LineNo" columnType="Int32" displayName="Номер строки" persistent="f002" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8d35df21-2180-4560-a70a-95122853f6ac">
+            <field Id="bf790a01-8bfb-403a-8775-dd41f332eaac" name="Delimeter" displayName="Разделитель" persistent="f003" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="717093a2-7fd3-4551-a132-2967b0baf421">
+            <field Id="9c986c8c-1e2e-47f7-816f-60ba974ef587" name="ParentID" persistent="f004" virtualColumnType="DocTrebovanie" logicalType="DocTrebovanie" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f86bb745-1f37-4321-82e7-1033437d6020">
+            <field Id="9932d4a4-a708-429b-9118-dd22df930238" name="Good" displayName="Товар" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e7cc7491-96b4-46b0-84b0-cccc04ada11f">
+            <field Id="723b233a-3b4c-4a29-b81f-67ecd59b8a98" name="Unit" displayName="Ед.Измерения" persistent="f006" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.DataSourceProperty(&quot;Good.UnitsCollection&quot;)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="268d4db5-1115-4743-b68e-935b047510a0">
+            <field Id="8f291e6f-bec0-4e88-8d76-32384236e3c0" name="Coeff" columnType="Decimal" displayName="Коэффициент" persistent="f007" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4947727b-e231-4561-80bf-91d4effd609a">
+            <field Id="7ea53d81-60a8-48b3-8083-8297a7eb0dd9" name="QuantityOfUnits" columnType="Decimal" persistent="f008" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bd7730f3-f8a5-4c48-956e-ae68e10971df">
+            <field Id="db497680-db2f-44fd-82f2-f6cabc7575dd" name="QuantityOfItems" columnType="Decimal" persistent="f009" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fe9b7082-6fd8-4a3d-9812-bfc32e27b9d3">
+            <field Id="e8b71cf3-6ba2-45e4-9c41-bd396dae941c" name="TotalQuantity" columnType="Decimal" displayName="Баз.количество" persistent="f010" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="be8e8b51-2302-4c59-b9ab-ec808b9f5b10">
+            <field Id="3550edbc-740c-4ed8-9de5-58f082a818c3" name="BestBefore" columnType="DateTime" displayName="Срок годности" persistent="f011" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" xMLDocComments="Срок годности" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d4250c87-fd29-4fa5-ba2c-24d7add098f5">
+            <field Id="6273b58c-9b2b-41be-a7bd-1bdddbc8c8ca" name="DocLineUID" columnType="Guid" displayName="Line idd" persistent="f012" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" delayedState="true" customAttributes="DevExpress.Persistent.Validation.RuleUniqueValue(&quot;&quot;, DevExpress.Persistent.Validation.DefaultContexts.Save, CriteriaEvaluationBehavior = DevExpress.Persistent.Validation.CriteriaEvaluationBehavior.BeforeTransaction),&#xD;&#xA;DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" xMLDocComments="Line uid" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ef016fdf-7b55-4237-b5e0-3f56b3285fac">
+            <field Id="c55e6113-686c-4f31-9862-8dfd799fc22a" name="Property" displayName="Характеристика" persistent="f013" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.DataSourceProperty(&quot;Good.PropertiesOfGoodsCollection&quot;)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0f2ed9a2-404b-4a81-bc62-03e64b1aed7d">
+            <persistentAlias Id="1e09c6fc-cf91-457b-8eb3-5d2b9cccb399" name="GoodCode" virtualColumnType="String" expression="ToStr([Good.Code])" displayName="Код товара" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8c2f3336-d3b8-437b-93b9-f1fc141ca341">
+            <field Id="2ecdafbc-41af-4ad4-bae0-c14baa049e3f" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f014" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="89708b21-ab0d-4f1a-94c8-b795d6c94770">
+            <index Id="4d6f5c2a-0805-4ad0-8ed7-aaf5f505e69c" name="Index_ParentID">
+              <fieldsInIndex>
+                <indexReferencesFields Id="c4af5f52-09a9-4dee-8c08-5ad4bef6f142">
+                  <fieldMoniker Id="9c986c8c-1e2e-47f7-816f-60ba974ef587" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="34e62955-279b-463d-bf5c-032b8eb9fa01">
+      <xpObject Id="218853d8-6978-4d9d-a740-063bfb6084f7" name="DocSpecPrihoda" baseClass="BaseDocument" userFileName="DocSpecPrihoda" designerFileName="DocSpecPrihoda.Designer" className="DocSpecPrihoda" virtualBaseClass="BaseDocument" persistent="Table_130" virtualName="DocSpecPrihoda">
+        <fields>
+          <generalXpObjectHasFields Id="99549a84-e45e-4dcd-b91a-04ab4b0cf115">
+            <field Id="27da6326-1d5a-41d2-97bb-0f0b1934cbc0" name="StockRoomTo" displayName="Кладовая-получатель" persistent="f050" virtualColumnType="SUTZ_2.Module.BO.References.StockRooms" logicalType="SUTZ_2.Module.BO.References.StockRooms" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b3044816-63fa-4566-ac36-f16deab16b6e">
+            <field Id="2bca7729-13da-4ebc-b38f-a53b110a682d" name="AllowSender" columnType="Boolean" displayName="Учитывать отправителя" persistent="f051" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fd0b6d8b-f165-424a-88b3-f0eaaa462af7">
+            <field Id="ba20b3e1-6742-4810-b12a-acee236f4e3d" name="AllowMovement" columnType="Boolean" displayName="Разрешить движение" persistent="f052" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="d08e2dc4-49cd-49be-ba1d-e0818923c6af">
+            <xpObjectMoniker Id="240ebf90-b780-4b08-a5ca-196c891f63fa" />
+          </inheritance>
+        </superClass>
+        <aggrTarget>
+          <aggregation Id="77d7d4be-0026-41a3-b6ba-99a5ba9da151" sourceCollectionName="DocListOfGoods" name="DocListOfGoodsSpecPrihodaReferencesDocSpecPrihoda" targetFieldName="ParentID">
+            <xpObjectMoniker Id="920031dd-e3a4-4bdb-be88-30026b8bdff7" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="0b209e02-f0a8-4ed9-aedd-f21e4210df87">
+            <collectionField Id="d7a8c4a9-c94b-436f-b979-b8f148e11935" name="DocListOfGoods" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="51e992cf-c42c-4502-b440-93906140759a">
+      <xpObject Id="b9571108-a24c-4793-b593-b6bce0545259" name="DocInvoiceOrderGoods" baseClass="XPBaseObject" userFileName="DocListOfGoodsInvoiceOrder" designerFileName="DocListOfGoodsInvoiceOrder.Designer" className="DocInvoiceOrderGoods" virtualBaseClass="XPBaseObject" persistent="Table_121" virtualName="DocInvoiceOrderGoods">
+        <fields>
+          <generalXpObjectHasFields Id="761bdff2-de9a-4e2b-8129-c069b95afca7">
+            <field Id="92e97829-1b23-4fca-bc68-2b190f86ba6b" name="idd" columnType="Int32" key="true" isIdentity="true" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6ffabae3-423e-44d0-bd95-d3b6394ff175">
+            <field Id="6f5da42e-aa8d-4650-95f8-b90b9c859778" name="LineNo" columnType="Int32" displayName="Номер строки" persistent="f002" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f66120a5-fdc8-44b4-82f7-df329360757a">
+            <field Id="90e99583-18dc-4b13-ae1d-ee338670c45f" name="Delimeter" displayName="Разделитель" persistent="f003" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="42880779-40b8-48de-85a2-9b8eb2b73563">
+            <field Id="87b7391e-303b-42d3-8e70-26eabfc4b174" name="ParentID" persistent="f004" virtualColumnType="DocInvoiceOrder" logicalType="DocInvoiceOrder" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c81a4873-6083-4b23-a700-06c45202a698">
+            <field Id="e98d069e-2a18-4d08-8e64-7fb509569104" name="Good" displayName="Товар" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d0f8ec1b-b705-4e1b-9aaf-bfe66028d79b">
+            <field Id="aad904b0-6c33-4878-be11-70a0288baaf4" name="Coeff" columnType="Decimal" displayName="Коэфф" persistent="f006" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9416b5d6-63ad-4de3-9bab-791e436732db">
+            <field Id="d7c52148-4939-410b-ab54-e6394714d2f1" name="Unit" displayName="Единица" persistent="f007" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a63d037c-85f9-4bc3-b497-de465e609678">
+            <field Id="23c4fb47-72f3-4c4e-a325-b4abe465d5ee" name="QuantityOfUnits" columnType="Decimal" displayName="Кол.кор" persistent="f008" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="25554f5d-ab20-4ebe-96c2-f612487211ee">
+            <field Id="55b073d0-ffd3-404f-a067-30b59df6f635" name="QuantityOfItems" columnType="Decimal" displayName="Кол.шт" persistent="f009" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ac395ab9-6553-4cc3-b44f-28f3b36f3cb9">
+            <field Id="58288a74-4094-4293-98cd-e6a392215433" name="TotalQuantity" columnType="Decimal" displayName="Итого" persistent="f010" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="28d0ebfe-6b15-403b-9825-842fb4b6d0e7">
+            <field Id="051b50df-c17f-4589-9a2b-e6a41d052f91" name="BestBefore" columnType="DateTime" displayName="Срок годности" persistent="f011" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" xMLDocComments="Срок годности" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="de9d1f1a-d4d5-4558-b38a-a235058807cf">
+            <field Id="93ae1fa6-668d-4843-b922-63380d966ae2" name="Property" displayName="Характеристика" persistent="f012" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="939ad213-fd86-4bab-af1f-e237b408d362">
+            <field Id="9412da15-1448-4457-aa51-c27f91a4fd9d" name="DocLineUID" columnType="Guid" displayName="Line idd" persistent="f013" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" delayedState="true" customAttributes="DevExpress.Persistent.Validation.RuleUniqueValue(&quot;&quot;, DevExpress.Persistent.Validation.DefaultContexts.Save, CriteriaEvaluationBehavior = DevExpress.Persistent.Validation.CriteriaEvaluationBehavior.BeforeTransaction),&#xD;&#xA;DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" xMLDocComments="Line uid" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0b2d236c-932a-4cfd-a618-15cd857befa2">
+            <field Id="aa592d83-dff7-4318-9a31-0497e0f07e90" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f014" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="9671c894-5552-4503-a666-241e98317a8a">
+      <xpObject Id="920031dd-e3a4-4bdb-be88-30026b8bdff7" name="DocSpecPrihodaGoods" baseClass="XPBaseObject" userFileName="DocListOfGoodsSpecPrihoda" designerFileName="DocListOfGoodsSpecPrihoda.Designer" className="DocSpecPrihodaGoods" virtualBaseClass="XPBaseObject" persistent="Table_131" virtualName="DocSpecPrihodaGoods">
+        <fields>
+          <generalXpObjectHasFields Id="9a64c355-5bfe-464d-b6dc-5b3b397966bd">
+            <field Id="fdeba55a-2261-4dff-b8cc-abd8008dd23f" name="idd" columnType="Int32" key="true" isIdentity="true" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2a573cca-f095-485c-8398-0e001796588f">
+            <field Id="eacc98f6-610a-4950-b855-ceb6ceb2c015" name="LineNo" columnType="Int32" displayName="№ строки" persistent="f002" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a6883539-9357-4e5a-8d54-9a25cd12bc8a">
+            <field Id="c2bc3e36-ea51-49f6-9e5b-b17fb8b51673" name="ParentID" persistent="f003" virtualColumnType="DocSpecPrihoda" logicalType="DocSpecPrihoda" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6b64df2c-f9bc-4e19-a003-9c7025c494ca">
+            <field Id="ab8e3164-2add-48d0-82c5-e1233df84dca" name="Delimeter" displayName="Разделитель" persistent="f004" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cd675896-7347-4abe-87e8-b658e7805f31">
+            <persistentAlias Id="ea69e059-abef-488a-b865-f321a86ed606" name="GoodCode" virtualColumnType="String" expression="ToStr([Good.Code])" displayName="Код товара" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="407cacc6-d09b-4424-b13f-5d5ba8c9bd45">
+            <field Id="45bc3fe0-7cd9-4089-9c38-b55ea091a966" name="Good" displayName="Товар" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2793f908-2da4-4c81-b12e-5517202a64e9">
+            <field Id="5098b706-dfdb-4001-b4cc-c76d0b1ecca1" name="Coeff" columnType="Decimal" displayName="Коэфф" persistent="f006" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Коэффициент единицы измерения" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="72ae57b2-46b8-4d49-80af-a60a3a48e7ad">
+            <field Id="bed9e489-bddb-429d-b686-ac2c490bb2a4" name="Unit" displayName="Единица" persistent="f007" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.DataSourceProperty(&quot;Good.UnitsCollection&quot;)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a2d084ed-d7b3-43b9-8afc-3cd9f07ba0db">
+            <field Id="d6eea8c4-1872-4008-9472-d414317cafd4" name="QuantityOfUnits" columnType="Decimal" displayName="Кол.кор" persistent="f008" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7598ac68-15e4-40cc-821e-323efa409a41">
+            <field Id="51b97033-f6e8-40c2-a341-bd9d68cd68d5" name="QuantityOfItems" columnType="Decimal" displayName="Кол.штук" persistent="f009" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="46bd17a3-0b50-4ea1-bd08-a49307783da3">
+            <field Id="4bc58585-0b5c-42f8-9357-fc2012bf8fec" name="TotalQuantity" columnType="Decimal" displayName="Итого" persistent="f010" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f152bcd2-d495-4375-ab05-5018c7572e9a">
+            <field Id="3f433152-6070-478f-9138-9f2bed1835eb" name="BestBefore" columnType="DateTime" displayName="Срок годности" persistent="f011" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" xMLDocComments="Срок годности" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9ff556e6-e340-44d2-914e-2f4420798c3b">
+            <field Id="0ff23473-0875-48a2-8e09-035aa44d27a4" name="Property" displayName="Характеристика" persistent="f012" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4a22c953-903e-4d73-9090-a3ea9fa4e525">
+            <field Id="f9e9acf7-b745-4d29-bd33-f0394d816368" name="PalletLabel" displayName="Штрихкод" persistent="f013" virtualColumnType="SUTZ_2.Module.BO.References.PalletLabels" logicalType="SUTZ_2.Module.BO.References.PalletLabels" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="512deb04-1a79-43f3-b17e-e7f8a8383a0e">
+            <field Id="3e063e4a-43b9-418b-95bd-c88427ba5b38" name="TakeFrom" displayName="Взять из" persistent="f014" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bbcbe69a-4ab4-41da-9326-360de3357721">
+            <field Id="db67cdb1-3767-4406-a5b5-da1e7fbebefd" name="PutTo" displayName="Положить в" persistent="f015" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="429bc12f-06be-4c07-adb5-5c6a401120ca">
+            <field Id="dee263fd-f0e2-4452-9591-024378fcc084" name="DocLineUID" columnType="Guid" displayName="Line guid" persistent="f016" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" delayedState="true" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" xMLDocComments="Line uid" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9f53dad0-eabb-4678-9b75-4732896bfc88">
+            <field Id="53f3aab9-ece3-478b-8eff-50238718af56" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f017" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="44ed0194-f664-454c-a96c-99ab37cacbeb">
+            <field Id="25feb535-16d8-40d1-a539-f3a9c00269d2" name="MoveStatus" displayName="Статус частичного проведения" persistent="f018" virtualColumnType="SUTZ_2.Module.BO.enDocRowMoveStatus" logicalType="SUTZ_2.Module.BO.enDocRowMoveStatus" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6e5c01f3-f571-4a87-9d18-ac25d1b0efc8">
+            <field Id="930c93a2-af20-45d5-87ac-432d4cf9c535" name="ExchangePoint" displayName="Точка передачи" persistent="f019" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="24a8beb2-5f41-4017-bb45-5bf0e63623c6">
+            <field Id="d9fdc204-0e43-43cd-a618-500aeabf5277" name="QuantityOrig" columnType="Decimal" displayName="Кол.исходное" persistent="f020" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="57920c58-7bea-459a-b891-db06f02581b8">
+            <field Id="02f710ea-6035-476c-9f18-da31a5ccbf33" name="QuantityFact" columnType="Decimal" displayName="Кол.факт" persistent="f021" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Фактическое количество товара после размещения через моб.сутз" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d185c60e-9de4-4630-94e0-1605149492a9">
+      <xpObject Id="e5a865f8-89ab-4159-9aee-a04472b00916" name="DocSpecPeremeshenie" baseClass="BaseDocument" userFileName="DocSpecPeremeshenie" designerFileName="DocSpecPeremeshenie.Designer" className="DocSpecPeremeshenie" virtualBaseClass="BaseDocument" persistent="Table_140" virtualName="DocSpecPeremeshenie">
+        <fields>
+          <generalXpObjectHasFields Id="f024bf51-7f2d-4ed6-8421-20848fd7c508">
+            <field Id="39a5d6f9-4ed0-48a5-8c78-94ff6819c97b" name="StockRoomFrom" displayName="Кладовая-отправитель" persistent="f050" virtualColumnType="SUTZ_2.Module.BO.References.StockRooms" logicalType="SUTZ_2.Module.BO.References.StockRooms" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="39e1d5da-30ec-435f-a85c-455a495ec02a">
+            <field Id="f54cf9db-c324-4c40-b59c-5fca0eeba6d6" name="StockRoomTo" displayName="Кладовая-получатель" persistent="f051" virtualColumnType="SUTZ_2.Module.BO.References.StockRooms" logicalType="SUTZ_2.Module.BO.References.StockRooms" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ea571b0b-d144-494b-85c9-e08481b2b507">
+            <field Id="5bda06a6-8181-4d84-82d3-f0fab31cc01e" name="AllowMovement" columnType="Boolean" displayName="Разрешить движение" persistent="f052" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="51886c07-d8bd-4b6e-bfb0-362c168e6733">
+            <xpObjectMoniker Id="240ebf90-b780-4b08-a5ca-196c891f63fa" />
+          </inheritance>
+        </superClass>
+        <aggrTarget>
+          <aggregation Id="ba82e73d-31a5-488e-b76c-d91ba36db6bc" sourceCollectionName="DocListOfGoods" name="DocListOfGoodsSpecPeremeshReferencesDocSpecPeremeshenie" targetFieldName="ParentID">
+            <xpObjectMoniker Id="53f83af1-be43-4611-8172-50c182f5298c" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="4414d7a0-d853-4b9f-b4a2-499db6a5312d">
+            <collectionField Id="acd28252-51e3-4896-8fcb-93620e2cd04a" name="DocListOfGoods" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="79abbd73-c692-4948-a0aa-91e20cc7cdce">
+      <xpObject Id="53f83af1-be43-4611-8172-50c182f5298c" name="DocSpecPeremeshGoods" baseClass="XPBaseObject" userFileName="DocListOfGoodsSpecPeremesh" designerFileName="DocListOfGoodsSpecPeremesh.Designer" className="DocSpecPeremeshGoods" virtualBaseClass="XPBaseObject" persistent="Table_141" virtualName="DocSpecPeremeshGoods">
+        <fields>
+          <generalXpObjectHasFields Id="b01fc209-af15-492b-813b-56939e90709b">
+            <field Id="c17faa48-c7fe-4d3b-842c-15b716f6bc2d" name="idd" columnType="Int32" key="true" isIdentity="true" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e4a9587d-b25e-47bf-8a5f-bc7b442d6faa">
+            <field Id="44290fc6-29c9-4218-ba70-952c82ac421e" name="LineNo" columnType="Int32" displayName="Номер строки" persistent="f002" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="09334629-b636-40c6-a1c3-d90acd312d1f">
+            <field Id="1a23e29f-aa61-4658-9607-723ed41ba301" name="ParentID" persistent="f003" virtualColumnType="DocSpecPeremeshenie" logicalType="DocSpecPeremeshenie" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3f9c0d9d-78ca-4bc4-9dbd-c0f9fe3c9e05">
+            <field Id="4fb52d9d-dc3e-4785-bc77-f40cd88751e5" name="Delimeter" displayName="Разделитель" persistent="f004" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8232b86b-57ef-4b3c-a829-f23dee707a65">
+            <field Id="65dc5079-7376-4d39-b4f4-635fb55197a9" name="Good" displayName="Товар" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="063a0d71-bd44-4db7-8efc-376077d7e53a">
+            <field Id="92479221-d46a-42e8-a517-f5d290bd872b" name="Coeff" columnType="Decimal" displayName="Коэффициент" persistent="f006" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="коэффициент" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="275ca313-7150-4908-982f-254d8dc2ee31">
+            <field Id="097a80ee-113c-4316-aee1-2849d3b25217" name="Unit" displayName="Единица" persistent="f007" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6859f850-90f2-4b34-9db5-a8577a16968a">
+            <field Id="66615c87-824a-4cdb-8f81-233b7cf6488e" name="QuantityOfUnits" columnType="Decimal" displayName="Кол.кор" persistent="f008" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b41c46c1-6e7b-44d6-add7-fc3d8b5b6fb6">
+            <field Id="325536ba-abfc-49bb-adba-63f4a8579903" name="QuantityOfItems" columnType="Decimal" displayName="Кол.шт" persistent="f009" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dc646296-dcb2-460a-b4b8-89fc2611827e">
+            <field Id="1e51d312-8b68-4de2-9045-c30f1c672ba1" name="TotalQuantity" columnType="Decimal" displayName="Итого" persistent="f010" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dfb5caca-3b85-4746-abba-0d49198fa381">
+            <field Id="cedc8b94-a559-4232-b1f8-26a2aeb911c8" name="BestBefore" columnType="DateTime" displayName="Срок годности" persistent="f011" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" xMLDocComments="Срок годности" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="794a8f9b-529f-48d7-98f8-2481f6c6571a">
+            <field Id="8665ce9e-96a2-4d2b-ac1a-887a1cc49bf9" name="Property" displayName="Характеристика" persistent="f012" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bbf92744-f6d4-47fa-b98d-571d68ac7d29">
+            <field Id="7fc6ee2b-71b6-4996-bfe4-defd2c253a6d" name="TakeFrom" displayName="Взять из" persistent="f013" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1907046e-ddc5-46e8-bd5b-7cd0ff60e774">
+            <field Id="9371d005-d655-4534-9bae-29fed3ba55e8" name="PutTo" displayName="Положить в" persistent="f014" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0e052efc-bd31-42e6-8aa0-76ffffd24395">
+            <field Id="2dfc5107-479b-453f-8977-c1ba6f34c9f4" name="DocLineUID" columnType="Guid" displayName="Line idd" persistent="f015" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" delayedState="true" customAttributes="DevExpress.Persistent.Validation.RuleUniqueValue(&quot;&quot;, DevExpress.Persistent.Validation.DefaultContexts.Save, CriteriaEvaluationBehavior = DevExpress.Persistent.Validation.CriteriaEvaluationBehavior.BeforeTransaction),&#xD;&#xA;DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" xMLDocComments="Line uid" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="21ff66f8-d0ec-499b-9d70-3033a9ce9b1c">
+            <field Id="8467a6dd-bad9-4ed8-a619-babfe0843808" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f016" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="feed028b-14d1-4c5c-bcd1-2e0aa8095998">
+            <field Id="4d4d43b1-b319-437c-8563-5c842e2d7a3e" name="PalletLabel" displayName="Штрихкод" persistent="f017" virtualColumnType="SUTZ_2.Module.BO.References.PalletLabels" logicalType="SUTZ_2.Module.BO.References.PalletLabels" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="24e7f5a9-3e03-4a1e-a216-70b3487b6ea4">
+            <field Id="0ba53ec5-1e2b-4c19-b1e9-b8884408e218" name="ExchangePoint" displayName="Точка передачи" persistent="f018" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="40f3de05-8444-4e50-bbcd-02ff7cafa992">
+            <field Id="ea52bbfb-3a3d-48f2-828a-d83832db09d5" name="QuantityOrig" columnType="Decimal" displayName="Кол.исходное" persistent="f019" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d7e0448f-7f69-4fe1-a09e-22f7621ef631">
+            <field Id="a1088a57-b5e6-448f-b4cf-ff52654badda" name="QuantityFact" columnType="Decimal" displayName="Кол.факт" persistent="f020" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Фактическое количество товара после размещения через моб.сутз" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d1534859-cd73-425d-b2c6-f3566fbd3e7b">
+            <field Id="24a64329-0b77-4df2-9fbb-e1d68a31cbcf" name="MoveStatus" displayName="Статус частичного проведения" persistent="f021" virtualColumnType="SUTZ_2.Module.BO.enDocRowMoveStatus" logicalType="SUTZ_2.Module.BO.enDocRowMoveStatus" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="cc709b13-b52a-4722-ba9a-94e298d0ff1b">
+      <xpObject Id="7a46599f-f398-4cf5-a2d8-e3e010fe9e99" name="DocSpecRashoda" baseClass="BaseDocument" userFileName="DocSpecRashoda" designerFileName="DocSpecRashoda.Designer" className="DocSpecRashoda" virtualBaseClass="BaseDocument" persistent="Table_150" virtualName="DocSpecRashoda">
+        <fields>
+          <generalXpObjectHasFields Id="9c815ccb-6a90-441a-af41-29346e6eb96a">
+            <field Id="117df8e9-88a4-4019-bffc-22d8f2ecc52f" name="StockRoomFrom" displayName="Кладовая-отправитель" persistent="f050" virtualColumnType="SUTZ_2.Module.BO.References.StockRooms" logicalType="SUTZ_2.Module.BO.References.StockRooms" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8bb667ca-65bb-4973-8e6f-71e8dd76fe94">
+            <field Id="8f0e2732-6904-4457-b774-b6a779ac81ad" name="OrderClosed" columnType="Boolean" displayName="Заказ закрыт" persistent="f051" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d7169edc-8992-4549-acc7-7317ec446139">
+            <field Id="e8643554-a0b8-4445-8080-507026c6d0e7" name="TovarOtobran" columnType="Boolean" displayName="Товар отобран" persistent="f052" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ed925bd7-2df6-47f5-8857-55afa07de315">
+            <field Id="ae21b04e-a744-4c1f-9ec2-1e872d104683" name="TovarPoluchen" columnType="Boolean" displayName="Товар получен" persistent="f053" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="2b0a8552-f555-49e2-8d0d-ee8ea0a561d1">
+            <xpObjectMoniker Id="240ebf90-b780-4b08-a5ca-196c891f63fa" />
+          </inheritance>
+        </superClass>
+        <aggrTarget>
+          <aggregation Id="0b653677-2b61-4ea8-91b5-d917fde6a93f" sourceCollectionName="DocListOfGoods" name="GeneralXpObject1ReferencesDocSpecRashoda" targetFieldName="ParentID">
+            <xpObjectMoniker Id="a2f7c7c8-29b0-4416-9499-6b46fd8e9667" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="3be75a99-f666-45bb-a0a7-177054f574d0">
+            <collectionField Id="61fb183d-663a-44b0-8849-67fdb36a980a" name="DocListOfGoods" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="3f7140b7-48fb-45d8-8fdf-ce1d5d0baaa1">
+      <xpObject Id="a2f7c7c8-29b0-4416-9499-6b46fd8e9667" name="DocSpecRashodaGoods" baseClass="XPBaseObject" userFileName="DocListOfGoodsSpecRashoda" designerFileName="DocListOfGoodsSpecRashoda.Designer" className="DocSpecRashodaGoods" virtualBaseClass="XPBaseObject" persistent="Table_151" virtualName="DocSpecRashodaGoods">
+        <fields>
+          <generalXpObjectHasFields Id="b0b24b5f-f32b-49ff-9643-d632ae803586">
+            <field Id="c7562f77-f61a-405f-b90b-98f0423e5b3a" name="idd" columnType="Int32" key="true" isIdentity="true" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9cd0a872-7e99-4886-982b-19aff24f39a5">
+            <field Id="5f742aa1-ab00-4200-992e-89a8c6ef1084" name="LineNo" columnType="Int32" displayName="Номер строки" persistent="f002" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1b692d6f-c408-42fa-8627-25c6c2a1e85e">
+            <field Id="c69fb4ee-bc64-462e-862a-d22d90e0b7cf" name="ParentID" persistent="f003" virtualColumnType="DocSpecRashoda" logicalType="DocSpecRashoda" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="af865643-e4f8-4ba2-9103-245c2c418df0">
+            <field Id="13e80d7d-3e1a-4a72-abc3-cf5d9313809e" name="Delimeter" displayName="Разделитель" persistent="f004" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4e6aa357-7b8d-4ce4-bcf4-9d0e2dcbdab6">
+            <field Id="368321e1-5924-4a60-a3cc-824dfd60a7d6" name="Good" displayName="Товар" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c8d4e3ae-b7b6-4312-af93-d05ebe982fa5">
+            <field Id="28e335fc-eed7-4f91-8f69-aea936b842b8" name="Coeff" columnType="Decimal" displayName="Коэффициент" persistent="f006" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="коэффициент" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cf8df894-feba-4d0f-8cd4-32465a29d4d1">
+            <field Id="dbee8cd8-cdac-4920-a94b-45c08348bcbe" name="Unit" displayName="Единица" persistent="f007" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a9d0d692-ec62-488f-840d-3bf4e2ab8988">
+            <field Id="9bb7a5a2-3e3e-4022-ad82-8b150b72bb46" name="QuantityOfUnits" columnType="Decimal" displayName="Кол.кор" persistent="f008" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9f35255b-447e-48eb-85b1-4630ef02fdd0">
+            <field Id="37889b4e-0bcd-48fb-8556-99404e27ad74" name="QuantityOfItems" columnType="Decimal" displayName="Кол.шт" persistent="f009" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cd2ebfd3-fcc0-4de7-8b08-238ef7af069f">
+            <field Id="8f0d337c-a411-4888-aec3-e2a4eb34a6a0" name="TotalQuantity" columnType="Decimal" displayName="Итого" persistent="f010" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3d753928-8b01-4cb2-9570-d52586238717">
+            <field Id="174033fb-5291-44a9-a4af-667df35681e2" name="BestBefore" columnType="DateTime" displayName="Срок годности" persistent="f011" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" xMLDocComments="Срок годности" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fdc0fe4f-1ea5-4df3-bbf2-398a928cea9a">
+            <field Id="27b5d347-b30b-4848-b257-80759af83a00" name="Property" displayName="Характеристика" persistent="f012" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b57e3291-6817-4f79-98eb-be35c2d5e66c">
+            <field Id="c9e6c3be-ef30-4268-8858-120efc635a6d" name="TakeFrom" displayName="Взять из" persistent="f013" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b8fcb74f-3bdd-4400-9f8b-1fdcb653b55f">
+            <field Id="30d6decb-dbf0-4210-84bc-9ac29c12f47c" name="PutTo" displayName="Положить в" persistent="f014" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="995d3d8e-990a-44a8-8c1a-4d1e7ea8acfa">
+            <field Id="36acf3ac-b363-41fe-a9d7-9f13b2fd3540" name="DocLineUID" columnType="Guid" displayName="Line idd" persistent="f015" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" delayedState="true" customAttributes="DevExpress.Persistent.Validation.RuleUniqueValue(&quot;&quot;, DevExpress.Persistent.Validation.DefaultContexts.Save, CriteriaEvaluationBehavior = DevExpress.Persistent.Validation.CriteriaEvaluationBehavior.BeforeTransaction),&#xD;&#xA;DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" xMLDocComments="Line uid" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="00535ec5-c8d5-4b22-8591-817e13d7d71a">
+            <field Id="d14c2cd5-f69f-4de7-b5f2-5d3cca7ce17a" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f016" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cec2bdfa-7d34-4cb8-8dff-b01ee6d8f4d1">
+            <field Id="c0e5f6f7-2363-4eda-bb40-6ba04a81c8a6" name="PalletLabel" displayName="Штрихкод" persistent="f017" virtualColumnType="SUTZ_2.Module.BO.References.PalletLabels" logicalType="SUTZ_2.Module.BO.References.PalletLabels" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3fc8376c-247d-4f86-aefe-5f75cb320de6">
+            <field Id="0c0e4cc0-941b-4f9d-b6c9-89665dc3f4ce" name="MoveStatus" displayName="Статус частичного проведения" persistent="f018" virtualColumnType="SUTZ_2.Module.BO.enDocRowMoveStatus" logicalType="SUTZ_2.Module.BO.enDocRowMoveStatus" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5082669f-0607-4932-aae8-f595bf4c9be6">
+            <field Id="c5f0a748-7c46-4182-8c24-a6c63703c992" name="ExchangePoint" displayName="Точка передачи" persistent="f019" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="61e1af33-f3bc-4c5e-8458-0a9c4286f15d">
+            <field Id="07125712-c826-43e0-ac57-d84f2657d851" name="QuantityOrig" columnType="Decimal" displayName="Кол.исходное" persistent="f020" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="77bc2a80-b6f9-4879-b55d-325458e2c795">
+            <field Id="1d4ad81d-b2d5-4a0d-a401-e75f29a5b4f4" name="QuantityFact" columnType="Decimal" displayName="Кол.факт" persistent="f021" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Фактическое количество товара после размещения через моб.сутз" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c8e84fcd-1708-4fb0-b6ff-e39a7c2f8af8">
+      <xpObject Id="e156fac6-25bd-4947-a13f-d7efec9db416" name="DocInventory" baseClass="BaseDocument" userFileName="DocInventory" designerFileName="DocInventory.Designer" className="DocInventory" virtualBaseClass="BaseDocument" persistent="Table_160" virtualName="DocInventory">
+        <fields>
+          <generalXpObjectHasFields Id="be8af531-e90f-4311-b6a7-1e815a0c5e0f">
+            <field Id="98c5edc4-3cd3-41fa-8d38-07b14b026f0d" name="StockRoomTo" displayName="Кладовая" persistent="f050" virtualColumnType="SUTZ_2.Module.BO.References.StockRooms" logicalType="SUTZ_2.Module.BO.References.StockRooms" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="24738a91-09bb-45a1-8cb8-4035569ca4c5">
+            <field Id="54ab0894-4b97-4dc2-9e8f-e1b7a6fa1542" name="TypeDoc" columnType="Int16" virtualColumnType="SUTZ_2.Module.BO.enDocStatesInventory" logicalType="SUTZ_2.Module.BO.enDocStatesInventory" delayedUpdateModifiedOnly="false" xMLDocComments="Вид инвентаризации - инвентаризация или корректировка" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2724bdc4-5b52-469d-8dc9-f65bc3083551">
+            <field Id="808f0e9d-ec92-4fa5-b589-734116b3070e" name="Warehouse" displayName="Склад" persistent="f055" virtualColumnType="SUTZ_2.Module.BO.References.Warehouses" logicalType="SUTZ_2.Module.BO.References.Warehouses" delayedUpdateModifiedOnly="false" xMLDocComments="Склад-отправитель" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="7bbd14ef-de1b-44da-8124-101fe7004fee">
+            <xpObjectMoniker Id="240ebf90-b780-4b08-a5ca-196c891f63fa" />
+          </inheritance>
+        </superClass>
+        <aggrTarget>
+          <aggregation Id="edbe924d-35e2-4c49-98a4-f3dc44ee777f" sourceCollectionName="DocListOfGoods" name="DocListOfGoodsInventoryReferencesDocInventory" targetFieldName="ParentID">
+            <xpObjectMoniker Id="dfe57981-9176-4746-93b9-8d10a12c42c8" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="599362eb-4711-4794-8a77-9fcebe228d9e">
+            <collectionField Id="1818a23d-9bca-41d1-875a-c395dad5358f" name="DocListOfGoods" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e7a06509-1384-4277-89e3-c9dfdbfa1762">
+      <xpObject Id="dfe57981-9176-4746-93b9-8d10a12c42c8" name="DocInventoryGoods" baseClass="XPBaseObject" userFileName="DocListOfGoodsInventory" designerFileName="DocListOfGoodsInventory.Designer" className="DocInventoryGoods" virtualBaseClass="XPBaseObject" persistent="Table_161" virtualName="DocInventoryGoods">
+        <fields>
+          <generalXpObjectHasFields Id="0f41d93f-23da-4497-95d9-2d7710b352cc">
+            <field Id="665e4fd0-6a90-4c76-a627-31377776f1f6" name="idd" columnType="Int32" key="true" isIdentity="true" persistent="f001" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fdc7382d-5dda-4674-a5fe-5c2afc15a717">
+            <field Id="ceffdb09-d399-4916-a2ac-3923c683d522" name="LineNo" columnType="Int32" displayName="Номер строки" persistent="f002" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="98e647c5-939b-46f7-acc6-f715385b1496">
+            <field Id="6ccbce81-c2a2-44fe-a945-e2d3807ed525" name="ParentID" persistent="f003" virtualColumnType="DocInventory" logicalType="DocInventory" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="352d324d-dc58-4e6d-a9ad-359a74ced22d">
+            <field Id="dafa6255-ab9b-4f08-9387-cdf9644e80f7" name="Delimeter" displayName="Разделитель" persistent="f004" virtualColumnType="SUTZ_2.Module.BO.References.Delimeters" logicalType="SUTZ_2.Module.BO.References.Delimeters" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d6938f04-e0ae-42d8-af84-fb8810c81b15">
+            <field Id="92a2a0eb-c652-4439-880e-beaee234c137" name="Good" displayName="Товар" persistent="f005" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8f56c94f-66b7-4700-9757-750e9659463f">
+            <field Id="04ffe05f-e3bc-4a87-8d7d-775d34a42bc9" name="GoodFact" displayName="Факт.товар" persistent="f006" virtualColumnType="SUTZ_2.Module.BO.References.Goods" logicalType="SUTZ_2.Module.BO.References.Goods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c5183d9b-78ae-44de-b7ae-582357ceeacb">
+            <field Id="8861607a-5619-49d6-bd34-3f47ab1e53f6" name="Unit" displayName="Единица" persistent="f007" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3759523f-4b97-482b-90d8-aed9d92d8eb8">
+            <field Id="35c0be7e-f828-4a40-a007-ab5af263d1b7" name="UnitFact" displayName="Факт.Единица" persistent="f008" virtualColumnType="SUTZ_2.Module.BO.References.Units" logicalType="SUTZ_2.Module.BO.References.Units" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="19387718-3f54-4a88-abbf-1d4a6cd31adc">
+            <field Id="ad627810-1f34-4adf-a0d1-018634b87006" name="Coeff" columnType="Decimal" displayName="Кол.кор" persistent="f009" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="86d357f9-8066-40b7-bd3a-c1d9b18615ad">
+            <field Id="083404cc-98f9-4cd4-bb91-d4b90c393104" name="CoeffFact" columnType="Decimal" displayName="Кол.кор" persistent="f010" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="afa0e53f-96b4-4ef0-a44d-e7701e14932d">
+            <field Id="9e61bb50-5955-4bcc-a84d-792720b3abe3" name="QuantityOfUnits" columnType="Decimal" displayName="Кол.кор" persistent="f011" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="306232b3-9523-4d18-8db0-0137ba4fee29">
+            <field Id="902f15e4-a2f5-4dcb-8b6c-a72319982ad3" name="QuantityOfUnitsFact" columnType="Decimal" displayName="Кол.кор.факт" persistent="f012" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество коробок" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f97b8472-ba0a-48f9-983a-a0dfc8a95be1">
+            <field Id="fc1cad51-e72c-4bf0-b0d2-98ad89d1b7ba" name="QuantityOfItems" columnType="Decimal" displayName="Кол.штук" persistent="f013" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="002392c3-cd4e-4b45-a673-f3dd56520306">
+            <field Id="2ae4fb86-214e-4ae5-9bb4-158cb28de9e9" name="QuantityOfItemsFact" columnType="Decimal" displayName="Кол.штук факт" persistent="f014" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Количество штук фактическое" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="133559d2-19d1-4670-82ad-858fbcf7d264">
+            <field Id="799253d4-956e-4d45-95c7-660e9817eca5" name="TotalQuantity" columnType="Decimal" displayName="Баз.количество" persistent="f015" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e6f53f12-37df-4562-ae16-24cd06e5aed1">
+            <field Id="cb85d096-74d0-447d-96f4-45e26fcfc8cd" name="TotalQuantityFact" columnType="Decimal" displayName="Баз.количество" persistent="f016" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Итого, количество:" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b2d4f215-499a-4634-b618-a79bab3f8236">
+            <field Id="0cc62947-0af4-4731-859f-ffcf338176be" name="BestBefore" columnType="DateTime" displayName="Срок годности" persistent="f017" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" xMLDocComments="Срок годности" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e76535ca-5f74-429f-98a7-715522f0ce4c">
+            <field Id="4f909140-66d9-488b-8d30-98cec3dac786" name="BestBeforeFact" columnType="DateTime" displayName="Факт срок годности" persistent="f018" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" xMLDocComments="Срок годности факт" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f39849bc-7391-4287-aa54-6d328883d236">
+            <field Id="dbb9f255-e9de-4f74-ba3a-b8e89d2f7b9d" name="TakeFrom" displayName="Взять из" persistent="f019" virtualColumnType="SUTZ_2.Module.BO.References.StorageCodes" logicalType="SUTZ_2.Module.BO.References.StorageCodes" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f54e7b35-789b-48df-ba3b-b4922ce19e9a">
+            <field Id="5b0d13ee-ef0c-4807-bf33-b2e3af840d96" name="Property" displayName="Характеристика" persistent="f020" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c6efb35d-b824-497e-8b34-71a083ae420f">
+            <field Id="4feb778d-384a-477f-963a-6a6350e75ace" name="PropertyFact" displayName="Характеристика факт" persistent="f021" virtualColumnType="SUTZ_2.Module.BO.References.PropertiesOfGoods" logicalType="SUTZ_2.Module.BO.References.PropertiesOfGoods" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="77da3c28-332b-40de-93e2-770820aaf647">
+            <field Id="d5a2d605-cb7c-4535-8ff8-0cc0c0ae2b37" name="DocLineUID" columnType="Guid" displayName="Line idd" persistent="f022" virtualColumnType="Guid" delayedUpdateModifiedOnly="false" delayedState="true" customAttributes="DevExpress.Persistent.Validation.RuleUniqueValue(&quot;&quot;, DevExpress.Persistent.Validation.DefaultContexts.Save, CriteriaEvaluationBehavior = DevExpress.Persistent.Validation.CriteriaEvaluationBehavior.BeforeTransaction),&#xD;&#xA;DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" xMLDocComments="Line uid" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5c9ebc5f-de76-4ef1-968d-6bda975ac559">
+            <field Id="cda82dd3-d187-4796-bd94-ddb52bee7915" name="IsMarkDeleted" columnType="Boolean" displayName="Пометка удаления" persistent="f023" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false), DevExpress.Persistent.Base.VisibleInLookupListView(false)" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+  <externalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="388ed3cb-5deb-4e2e-b38d-f4c3b64a8b7a">
+      <externalType Id="f458ddfe-2184-48f6-8db6-fcdc6a98a125" name="Delimeters" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="3441275b-8af1-4181-ba78-19a8b19cf4bb">
+      <externalType Id="d53d2479-e875-42f8-ba87-63025852855f" name="DocStates" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="f5e31ae8-4084-4b59-b21c-8e2264b4ceba">
+      <externalType Id="cf96a36a-6525-41fb-bee5-951a12b2ae77" name="Goods" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="71c54074-297f-45f6-8a6b-86496f021e32">
+      <externalType Id="ac35a2a2-f301-43a9-ba3c-3f64665c0086" name="Units" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="98891f9c-167d-4f42-971e-fc79daba5b7f">
+      <externalType Id="e94226fc-6bdf-42ff-ab45-c587c80dca15" name="Clients" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="2884a486-5c12-471a-af45-a93344fbccca">
+      <externalType Id="b9a954fb-31b6-4ba1-b4f5-fd41928f647c" name="DocStatesASUInvoice" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="0e49532b-539e-449d-9ff9-349e28276af3">
+      <externalType Id="cbebd122-7fdc-4d88-9bc1-8ffafce10027" name="Warehouses" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="f773c173-6fd1-4938-bd40-078f139d1e60">
+      <externalType Id="0d41b09c-97e5-43a3-aa14-e95c248c59bd" name="enDeliveryTypes" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="fe80b2ba-8be2-4592-9fa0-6e29244bcb9f">
+      <externalType Id="7d116a55-95fd-4f45-b8d5-dc3cb6368800" name="ClientShops" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="20a1b573-5c5c-4447-9e51-1c99f0f179b0">
+      <externalType Id="2603cca3-42df-45c9-93dc-5f4bc616e575" name="ClientDivisions" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="07404221-854b-4acd-93d0-f18a7fb1e126">
+      <externalType Id="8339dbb2-f95e-44bf-aa37-c2c4a1ddcbd2" name="PropertiesOfGoods" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="14baf573-11c0-4681-8b21-b91f8f4e7092">
+      <externalType Id="44293dcf-93d4-472d-b8b8-b4df87b5645f" name="StockRooms" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="c7737d93-bac7-433f-a008-8a78040f70ae">
+      <externalType Id="5dc1401e-167b-41ea-b18f-c6a3da53d134" name="StorageCodes" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="81311ae6-5896-4814-ae9e-74fc09a5a6f1">
+      <externalType Id="4f29f646-10c0-4189-9674-b78abec0af6f" name="PalletLabels" namespace="SUTZ_2.Module.BO.References" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="0e7fb247-67a8-46a0-abaa-c9b2c2ed1332">
+      <externalType Id="5526f3cc-6059-498f-a611-400f6788cffb" name="enDocStatesInventory" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="a10f195d-a79b-4598-b45c-78444b0df296">
+      <externalType Id="1bb82017-8832-4dd6-bbd9-aa1621dd8a24" name="enDocPropertyStatus" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="43d3c582-ad3e-4170-b417-1bd19ab8dbac">
+      <externalType Id="80be9303-6c8a-4526-813c-387f2ef404a8" name="enDocumentType" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="3b24a4a0-49f8-4e6f-98a9-f0e0397f4ccc">
+      <externalType Id="0bf66b06-d74a-497e-b4e1-0bfe5d548d4d" name="enDocRowMoveStatus" namespace="SUTZ_2.Module.BO" />
+    </dataBaseObjectModelHasExternalTypes>
+  </externalTypes>
+</dataBaseObjectModel>

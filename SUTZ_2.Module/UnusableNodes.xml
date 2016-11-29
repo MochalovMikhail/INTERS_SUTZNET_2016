@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Units_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OKEIId.Description" Caption="Единица" PropertyName="OKEIId" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

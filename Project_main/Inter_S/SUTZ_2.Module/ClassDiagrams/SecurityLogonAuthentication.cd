@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SUTZ_2.Module.BO.References.UsersRole">
+    <Position X="5.25" Y="10.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\References\ORMDataModelReferencesCode\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SUTZ_2.Module.BO.References.Users" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1.75" Width="2.25" />
+    <InheritanceLine Type="DevExpress.Xpo.XPBaseObject" ManuallyRouted="true">
+      <Path>
+        <Point X="4.25" Y="7.259" />
+        <Point X="6.417" Y="7.259" Type="JumpStart" />
+        <Point X="6.583" Y="7.259" Type="JumpEnd" />
+        <Point X="10.5" Y="7.259" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AIAAEAAoAAAgAIBAFAYgEJYAAAAACAIECQQAgBEgChA=</HashCode>
+      <FileName>BO\References\ORMDataModelReferencesCode\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SUTZ_2.Module.BO.References.CustomAuthentication" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQAAAAAAAIAAAIAEAAAABCEAAAIAAAAAAI=</HashCode>
+      <FileName>CustomLogonModules\CustomAuthentication.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SUTZ_2.Module.BO.References.CustomLogonParametersUsers" BaseTypeListCollapsed="true">
+    <Position X="18" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAARAgACAAAABAgAAAAQAAAAgCAAAAACAQgAAgAAAQI=</HashCode>
+      <FileName>CustomLogonModules\CustomLogonParametersUsers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DevExpress.Xpo.XPBaseObject">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DevExpress.ExpressApp.Security.AuthenticationBase">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemRoleBase">
+    <Position X="5.5" Y="8" Width="2.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemTypePermissionsObjectOwner">
+    <Position X="5" Y="3.5" Width="3" />
+    <InheritanceLine Type="DevExpress.Xpo.XPCustomObject" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="2.25" />
+        <Point X="6.875" Y="2.25" />
+        <Point X="6.875" Y="3.125" />
+        <Point X="6.5" Y="3.125" />
+        <Point X="6.5" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DevExpress.Xpo.XPCustomObject">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="18" Y="2.25" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

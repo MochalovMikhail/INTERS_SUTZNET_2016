@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="SUTZ_2.Module.BO.Exchange.SUTZ1C_SUTZNET.SQL_Exchange_Inbound">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="MessageWindow" RowCount="3" Size="-1" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

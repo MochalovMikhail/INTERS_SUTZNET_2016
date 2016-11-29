@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62B819F3-1423-4833-98D0-78BC1372A033}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SUTZ_2.Module</RootNamespace>
+    <AssemblyName>SUTZ_2.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugMobile|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugMobile\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SUTZ_2.Module.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Win.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v16.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v16.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v16.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v16.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v16.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v16.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.4.3.11\lib\net40\NLog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\BaseDocument.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\BaseDocument.Designer.cs">
+      <DependentUpon>BaseDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocInventory.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocInventory.Designer.cs">
+      <DependentUpon>DocInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocInvoiceOrder.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocInvoiceOrder.Designer.cs">
+      <DependentUpon>DocInvoiceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsInventory.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsInventory.Designer.cs">
+      <DependentUpon>DocListOfGoodsInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsInvoiceOrder.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsInvoiceOrder.Designer.cs">
+      <DependentUpon>DocListOfGoodsInvoiceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsSpecPeremesh.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsSpecPeremesh.Designer.cs">
+      <DependentUpon>DocListOfGoodsSpecPeremesh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsSpecPrihoda.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsSpecPrihoda.Designer.cs">
+      <DependentUpon>DocListOfGoodsSpecPrihoda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsSpecRashoda.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsSpecRashoda.Designer.cs">
+      <DependentUpon>DocListOfGoodsSpecRashoda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsTrebovanie.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocListOfGoodsTrebovanie.Designer.cs">
+      <DependentUpon>DocListOfGoodsTrebovanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocSpecPeremeshenie.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocSpecPeremeshenie.Designer.cs">
+      <DependentUpon>DocSpecPeremeshenie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocSpecPrihoda.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocSpecPrihoda.Designer.cs">
+      <DependentUpon>DocSpecPrihoda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocSpecRashoda.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocSpecRashoda.Designer.cs">
+      <DependentUpon>DocSpecRashoda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocTrebovanie.cs" />
+    <Compile Include="BO\Documents\ORMDataModelDocumentsCode\DocTrebovanie.Designer.cs">
+      <DependentUpon>DocTrebovanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\Controllers\RunInboundDataViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BO\Exchange\Controllers\RunInboundDataViewController.Designer.cs">
+      <DependentUpon>RunInboundDataViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecRashGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecRashGoods.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocSpecRashGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecRashHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecRashHeaders.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocSpecRashHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_OperationState.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_OperationState.Designer.cs">
+      <DependentUpon>SUTZ_NET_OperationState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\SQL_Exchange_NET_77.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\Exchange_SUTZ_77.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\LogMessages.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\ConnectionHelper.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocJobeProperties.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocJobeProperties.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocJobeProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocProperties.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocProperties.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPeremeshGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPeremeshGoods.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocSpecPeremeshGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPeremeshHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPeremeshHeaders.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocSpecPeremeshHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPrihodaHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPrihodaHeaders.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocSpecPrihodaHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPrihodaGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_DocSpecPrihodaGoods.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocSpecPrihodaGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_MobileWorkDocRows.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_MobileWorkDocRows.Designer.cs">
+      <DependentUpon>NET_SUTZ_MobileWorkDocRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_MobileWorkUnit.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_MobileWorkUnit.Designer.cs">
+      <DependentUpon>NET_SUTZ_MobileWorkUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_MobileWorkUsers.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\NET_SUTZ_MobileWorkUsers.Designer.cs">
+      <DependentUpon>NET_SUTZ_MobileWorkUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_BarcodesOfGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_BarcodesOfGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_BarcodesOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Clients.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Clients.Designer.cs">
+      <DependentUpon>SUTZ_NET_Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Countries.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Countries.Designer.cs">
+      <DependentUpon>SUTZ_NET_Countries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_CustomerStores.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_CustomerStores.Designer.cs">
+      <DependentUpon>SUTZ_NET_CustomerStores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_CustomerUnits.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_CustomerUnits.Designer.cs">
+      <DependentUpon>SUTZ_NET_CustomerUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInventoryGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInventoryGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocInventoryGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInventoryHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInventoryHeaders.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocInventoryHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInvoiceOrderGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInvoiceOrderGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocInvoiceOrderGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInvoiceOrderHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocInvoiceOrderHeaders.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocInvoiceOrderHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocJobeProperties.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocJobeProperties.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocJobeProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPeremeshGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPeremeshGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocSpecPeremeshGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPeremeshHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPeremeshHeaders.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocSpecPeremeshHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPrihodaGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPrihodaGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocSpecPrihodaGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPrihodaHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecPrihodaHeaders.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocSpecPrihodaHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecRashodaGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecRashodaGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocSpecRashodaGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecRashodaHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocSpecRashodaHeaders.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocSpecRashodaHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocTrebovanieGoods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocTrebovanieGoods.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocTrebovanieGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocTrebovanieHeaders.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_DocTrebovanieHeaders.Designer.cs">
+      <DependentUpon>SUTZ_NET_DocTrebovanieHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Goods.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Goods.Designer.cs">
+      <DependentUpon>SUTZ_NET_Goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_HostsUsers.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_HostsUsers.Designer.cs">
+      <DependentUpon>SUTZ_NET_HostsUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_JobTypes.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_JobTypes.Designer.cs">
+      <DependentUpon>SUTZ_NET_JobTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Logistics.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Logistics.Designer.cs">
+      <DependentUpon>SUTZ_NET_Logistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Manufacturers.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Manufacturers.Designer.cs">
+      <DependentUpon>SUTZ_NET_Manufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_OKEI.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_OKEI.Designer.cs">
+      <DependentUpon>SUTZ_NET_OKEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Properties.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Properties.Designer.cs">
+      <DependentUpon>SUTZ_NET_Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StockRooms.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StockRooms.Designer.cs">
+      <DependentUpon>SUTZ_NET_StockRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StorageCodes.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StorageCodes.Designer.cs">
+      <DependentUpon>SUTZ_NET_StorageCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Units.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Units.Designer.cs">
+      <DependentUpon>SUTZ_NET_Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Users.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Users.Designer.cs">
+      <DependentUpon>SUTZ_NET_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Warehouses.cs" />
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Warehouses.Designer.cs">
+      <DependentUpon>SUTZ_NET_Warehouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Exchange\SUTZ1C_SUTZNET\SQL_Exchange_Inbound.cs" />
+    <Compile Include="BO\IBaseSUTZReferences.cs" />
+    <Compile Include="BO\References\SharedContollers\AllReferences_ViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BO\References\SharedContollers\AllReferences_ViewController.Designer.cs">
+      <DependentUpon>AllReferences_ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\МобильнаяСУТЗ\Modules\ControlWorkUnitsByDocAndJobe.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\ConnectionHelper.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\DocJobeProperties.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\DocJobeProperties.Designer.cs">
+      <DependentUpon>DocJobeProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileErrors.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileErrors.Designer.cs">
+      <DependentUpon>MobileErrors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileWorkDocRows.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileWorkDocRows.Designer.cs">
+      <DependentUpon>MobileWorkDocRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileWorkUnit.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileWorkUnit.Designer.cs">
+      <DependentUpon>MobileWorkUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileWorkUsers.cs" />
+    <Compile Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModelCode\MobileWorkUsers.Designer.cs">
+      <DependentUpon>MobileWorkUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ClientShops.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ClientShops.Designer.cs">
+      <DependentUpon>ClientShops.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ConnectionHelper.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\JobTypes.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\JobTypes.Designer.cs">
+      <DependentUpon>JobTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ContainerNumbers.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ContainerNumbers.Designer.cs">
+      <DependentUpon>ContainerNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\NET_SUTZ_DocRows.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\NET_SUTZ_DocRows.Designer.cs">
+      <DependentUpon>NET_SUTZ_DocRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\NET_SUTZ_Unloads.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\NET_SUTZ_Unloads.Designer.cs">
+      <DependentUpon>NET_SUTZ_Unloads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\UserSettings.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\UserSettings.Designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ClientDivisions.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\ClientDivisions.Designer.cs">
+      <DependentUpon>ClientDivisions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\SetOfGoods.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\SetOfGoods.Designer.cs">
+      <DependentUpon>SetOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\PropertiesOfGoods.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\PropertiesOfGoods.Designer.cs">
+      <DependentUpon>PropertiesOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Clients.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\StorageCodes.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\StorageCodes.Designer.cs">
+      <DependentUpon>StorageCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Delimeters.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Delimeters.Designer.cs">
+      <DependentUpon>Delimeters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\LogisticsSettings.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\LogisticsSettings.Designer.cs">
+      <DependentUpon>LogisticsSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\StockRooms.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\StockRooms.Designer.cs">
+      <DependentUpon>StockRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\TypesOfCellValue.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\TypesOfCellValue.Designer.cs">
+      <DependentUpon>TypesOfCellValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Users.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Warehouses.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Warehouses.Designer.cs">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Countries.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Countries.Designer.cs">
+      <DependentUpon>Countries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Goods.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Goods.Designer.cs">
+      <DependentUpon>Goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Units.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Units.Designer.cs">
+      <DependentUpon>Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Manufacturers.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\Manufacturers.Designer.cs">
+      <DependentUpon>Manufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\MaxNumbersForObjects.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\MaxNumbersForObjects.Designer.cs">
+      <DependentUpon>MaxNumbersForObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\OKEI.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\OKEI.Designer.cs">
+      <DependentUpon>OKEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\BarcodesOfGoods.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\BarcodesOfGoods.Designer.cs">
+      <DependentUpon>BarcodesOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\BarcodesOfShipments.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\BarcodesOfShipments.Designer.cs">
+      <DependentUpon>BarcodesOfShipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\PalletLabels.cs" />
+    <Compile Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModelCode\PalletLabels.Designer.cs">
+      <DependentUpon>PalletLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\References\SharedContollers\ViewControllerLogisticSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BO\References\SharedContollers\ViewControllerLogisticSettings.Designer.cs">
+      <DependentUpon>ViewControllerLogisticSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ГлобальныйМодуль\LimitedConcurrencyLevelTaskScheduler.cs" />
+    <Compile Include="BO\ГлобальныйМодуль\RefGlobalMetods.cs" />
+    <Compile Include="BO\Перечисления\Sutz_Enums.cs" />
+    <Compile Include="Controls\CustomProgressBarControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="currentSessionSettings.cs" />
+    <Compile Include="Controllers\ShowCustomFormWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomLogonModules\CustomAuthentication.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomLogonModules\CustomLogonParametersUsers.cs" />
+    <Compile Include="DataBaseProxy\MyXPODataStoreProvider.cs" />
+    <Compile Include="DataBaseProxy\WinApplication.cs" />
+    <Compile Include="Editors\CustomUserControlViewItem.cs" />
+    <Compile Include="Editors\ViewControllerSelectForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\ViewControllerSelectForm.Designer.cs">
+      <DependentUpon>ViewControllerSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="PropertyEditors\CustomWinProgressBarEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BO\Exchange\Controllers\RunInboundDataViewController.resx">
+      <DependentUpon>RunInboundDataViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BO\References\SharedContollers\AllReferences_ViewController.resx">
+      <DependentUpon>AllReferences_ViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BO\References\SharedContollers\ViewControllerLogisticSettings.resx">
+      <DependentUpon>ViewControllerLogisticSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BO\Documents\ORMDataModelDocuments.xpo">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BO\Documents\ORMDataModelDocuments.xpo.diagram">
+      <DependentUpon>ORMDataModelDocuments.xpo</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNET.xpo" />
+    <None Include="BO\Exchange\SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNET.xpo.diagram">
+      <DependentUpon>ORMDataModelSutz1C_SutzNET.xpo</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModel.xpo" />
+    <None Include="BO\References\МобильнаяСУТЗ\MobileSUTZ_ORMDataModel.xpo.diagram">
+      <DependentUpon>MobileSUTZ_ORMDataModel.xpo</DependentUpon>
+    </None>
+    <None Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModel.xpo" />
+    <None Include="BO\References\СУТЗ\SUTZ_Refernces_ORMDataModel.xpo.diagram">
+      <DependentUpon>SUTZ_Refernces_ORMDataModel.xpo</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagrams\SecurityLogonAuthentication.cd" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BO\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\Sample.ets" />
+    <None Include="Images\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes11.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes10.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes9.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes8.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes7.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Images\RedFlag.png" />
+    <EmbeddedResource Include="Images\RedFlag_32x32.png" />
+    <None Include="BO\Exchange\SUTZ1C_SUTZNET\ReadMe.txt" />
+    <Content Include="FunctionalTests\Config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLogic\Mobile\" />
+    <Folder Include="CustomTemplates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

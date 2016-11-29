@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="DevExpress.ExpressApp.ReportsV2.PredefinedRepotDataContainer">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="DisplayName" Caption="Наименование" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="Goods_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Goods">
+              <LayoutGroup Id="Goods_col1">
+                <LayoutItem Id="FilterOfMoving" SizeConstraintsType="Default" RelativeSize="11.538461538461538" Index="6" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SQL_Exchange_Inbound_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="ГруппыЛогированияДействий">
+            <LayoutGroup Id="ListOfTypeMessages">
+              <LayoutItem Id="ProgressBarControlIn" ViewItem="ProgressBarControlMy" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

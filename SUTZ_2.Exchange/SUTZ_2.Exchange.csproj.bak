@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B34481F5-2833-40FE-831E-4E7E69AD4532}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SUTZ_2.Exchange</RootNamespace>
+    <AssemblyName>SUTZ_2.Exchange</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v13.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v13.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v13.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v13.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v13.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\RunInboundDataViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\RunInboundDataViewController.Designer.cs">
+      <DependentUpon>RunInboundDataViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\ConnectionHelper.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Countries.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Countries.Designer.cs">
+      <DependentUpon>SUTZ_NET_Countries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Goods.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Goods.Designer.cs">
+      <DependentUpon>SUTZ_NET_Goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_HostsUsers.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_HostsUsers.Designer.cs">
+      <DependentUpon>SUTZ_NET_HostsUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Manufacturers.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Manufacturers.Designer.cs">
+      <DependentUpon>SUTZ_NET_Manufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_OKEI.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_OKEI.Designer.cs">
+      <DependentUpon>SUTZ_NET_OKEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Properties.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Properties.Designer.cs">
+      <DependentUpon>SUTZ_NET_Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StockRooms.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StockRooms.Designer.cs">
+      <DependentUpon>SUTZ_NET_StockRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StorageCodes.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_StorageCodes.Designer.cs">
+      <DependentUpon>SUTZ_NET_StorageCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Units.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Units.Designer.cs">
+      <DependentUpon>SUTZ_NET_Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Warehouses.cs" />
+    <Compile Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNETCode\SUTZ_NET_Warehouses.Designer.cs">
+      <DependentUpon>SUTZ_NET_Warehouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUTZ1C_SUTZNET\SQL_Exchange_Inbound.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\RunInboundDataViewController.resx">
+      <DependentUpon>RunInboundDataViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <DependentUpon>Module.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNET.xpo" />
+    <None Include="SUTZ1C_SUTZNET\ORMDataModelSutz1C_SutzNET.xpo.diagram">
+      <DependentUpon>ORMDataModelSutz1C_SutzNET.xpo</DependentUpon>
+    </None>
+    <None Include="SUTZ1C_SUTZNET\ReadMe.txt" />
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SUTZ_2.Module\SUTZ_2.Module.csproj">
+      <Project>{62B819F3-1423-4833-98D0-78BC1372A033}</Project>
+      <Name>SUTZ_2.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="SUTZ_2.Module.BO.References.Barcodes" Caption="Штрихкоды" DefaultListViewNewItemRowPosition="None" DefaultListViewShowAutoFilterRow="True" DefaultLookupEditorMode="Auto" DefaultListViewAllowEdit="False" />
+    <Class Name="SUTZ_2.Module.BO.References.Units">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="MultiCaseUnitID" Caption="Мульти-упаковка" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

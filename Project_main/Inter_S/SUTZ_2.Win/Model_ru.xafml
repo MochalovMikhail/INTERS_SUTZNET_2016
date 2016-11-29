@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="SUTZ_2.Module.BO.Documents.DocInventory" Caption="Инвентаризация" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocInventoryGoods" Caption="Товары" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocInvoiceOrder" Caption="Заявка покупателя" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocInvoiceOrderGoods" Caption="Товары" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPeremeshenie" Caption="Спецификация перемещения" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPeremeshGoods" Caption="Товары" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPrihoda" Caption="Спецификация прихода" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecPrihodaGoods" Caption="Товары" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecRashoda" Caption="Отборочный лист" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocSpecRashodaGoods" Caption="Товары" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocTrebovanie" Caption="Требование на разгрузку" />
+    <Class Name="SUTZ_2.Module.BO.Documents.DocTrebovanieGoods" Caption="Товары" />
+  </BOModel>
+</Application>

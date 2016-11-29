@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Properties_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Properties">
+              <LayoutGroup Id="Properties_col1">
+                <LayoutItem Id="Delimeter" SizeConstraintsType="Default" Index="0" RelativeSize="4" ViewItem="Delimeter" Removed="True" />
+                <LayoutItem Id="iddSUTZ_GUID" SizeConstraintsType="Default" Index="1" RelativeSize="3" ViewItem="iddSUTZ_GUID" Removed="True" />
+                <LayoutItem Id="idd" ViewItem="idd" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

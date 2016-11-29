@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="SQL_Exchange_Inbound_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="ГруппыЛогированияДействий">
+            <LayoutGroup Id="ListOfTypeMessages">
+              <LayoutItem Id="ProgressBarControlMy" ViewItem="ProgressBarControlMy" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
